@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ros2 pkg prefix:*)",
+      "Bash(cat:*)",
+      "Bash(colcon build:*)",
+      "Bash(sed:*)",
+      "Bash(git restore:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,17 +1,10 @@
-*.pyc
-*.pyd
-*.pyo
-*.so
-*.dylib
-*~
-*.orig
-*.ipynb_checkpoints
-build*/*
-_build*
-*.aux
-*.log
-*.pdf
-.clang-format
-.vscode/
-*#*#
-.cache/
+# Ignore everything
+*
+*/
+
+# But don't ignore wbot folder and its contents
+!wbot/
+!wbot/**
+
+# Don't ignore .gitignore itself
+!.gitignore
