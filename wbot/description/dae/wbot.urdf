@@ -1,0 +1,692 @@
+<?xml version="1.0"?>
+<robot name="base_link">
+    <link name="robot_base">
+        <inertial>
+            <origin xyz="-0.218350 -0.005842 0.092553" rpy="1.570796 3.141593 -1.570796" />
+            <inertia ixy="1.2513676403847e-06" ixx="0.064804638540758" iyy="0.14452167018974" ixz="-2.3592264854134e-06" iyz="-0.0011521280944234" izz="0.087047491679794" />
+            <mass value="5.623271961996" />
+        </inertial>
+        <collision name="base_link">
+            <origin xyz="0.000000 0.000000 0.060000" rpy="1.570796 3.141593 -1.570796" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_robot_base_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="base_link">
+            <origin xyz="0.000000 0.000000 0.060000" rpy="1.570796 3.141593 -1.570796" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_base_link_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039 0.917647 0.929412 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="ccc1" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="robot_base" />
+        <child link="ccc1" />
+        <origin xyz="-0.186000 -0.100000 0.104500" rpy="-1.570796 1.570796 0.000000" />
+    </joint>
+    <link name="ccc1">
+        <inertial>
+            <origin xyz="-0.244784 0.000102 0.103922" rpy="-0.000000 -1.570796 0.000000" />
+            <inertia ixy="-8.4067910816865e-10" ixx="0.070185282859721" iyy="0.067055926928751" ixz="9.6412721379019e-06" iyz="-6.7557527621795e-06" izz="0.0071497461791454" />
+            <mass value="3.7016242824674" />
+        </inertial>
+        <collision name="ccc1">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="-0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccc1_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="ccc1">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="-0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccc1_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039 0.917647 0.929412 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="ccc2" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="ccc1" />
+        <child link="ccc2" />
+        <origin xyz="-0.434000 -0.000073 0.023000" rpy="-3.138407 3.141593 -3.141593" />
+    </joint>
+    <link name="ccc2">
+        <inertial>
+            <origin xyz="-0.214307 0.003984 0.072872" rpy="-0.000000 -1.570796 0.000000" />
+            <inertia ixy="-1.5256364773523e-05" ixx="0.092851873481353" iyy="0.085630787639047" ixz="-0.00013794834415185" iyz="-0.00594276868826" izz="0.0087680566274935" />
+            <mass value="3.9810693826498" />
+        </inertial>
+        <collision name="ccc2">
+            <origin xyz="0.000000 -0.000000 -0.000000" rpy="-0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccc2_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="ccc2">
+            <origin xyz="0.000000 -0.000000 -0.000000" rpy="-0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccc2_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039 0.917647 0.929412 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="ccc3" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="ccc2" />
+        <child link="ccc3" />
+        <origin xyz="-0.422000 0.039560 0.138127" rpy="-3.138407 3.141593 3.141593" />
+    </joint>
+    <link name="ccc3">
+        <inertial>
+            <origin xyz="-0.108814 0.001685 -0.060901" rpy="0.000000 -1.570796 0.000000" />
+            <inertia ixy="1.0696385141248e-06" ixx="0.0093214765926788" iyy="0.012123949782441" ixz="2.0512744030902e-05" iyz="0.00063380390550947" izz="0.0089609612811823" />
+            <mass value="2.1526385145955" />
+        </inertial>
+        <collision name="ccc3">
+            <origin xyz="0.000000 0.000000 -0.000000" rpy="0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccc3_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="ccc3">
+            <origin xyz="0.000000 0.000000 -0.000000" rpy="0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccc3_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039 0.921569 0.929412 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="ccc4" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="ccc3" />
+        <child link="ccc4" />
+        <origin xyz="-0.152000 -0.054305 -0.061173" rpy="3.141593 4.709204 1.570796" />
+    </joint>
+    <link name="ccc4">
+        <inertial>
+            <origin xyz="-0.000008 -0.079100 0.057458" rpy="-1.570796 3.141593 3.141593" />
+            <inertia ixy="1.7754311663945e-07" ixx="0.0017998017224573" iyy="0.0019823953689109" ixz="3.4117893720022e-07" iyz="-1.1109202408606e-05" izz="0.0021137902438734" />
+            <mass value="1.415002021884" />
+        </inertial>
+        <collision name="ccc4">
+            <origin xyz="0.000000 0.000000 -0.000000" rpy="-1.570796 3.141593 3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccc4_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="ccc4">
+            <origin xyz="0.000000 0.000000 -0.000000" rpy="-1.570796 3.141593 3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccc4_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039 0.921569 0.929412 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="ccc5" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="ccc4" />
+        <child link="ccc5" />
+        <origin xyz="0.000183 -0.096500 0.057500" rpy="-1.570796 3.138407 3.141593" />
+    </joint>
+    <link name="ccc5">
+        <inertial>
+            <origin xyz="0.000019 -0.025084 0.236799" rpy="-3.141593 3.141593 3.141593" />
+            <inertia ixy="-8.4440548013006e-07" ixx="0.024469302798363" iyy="0.034839496598546" ixz="-1.6958081568662e-07" iyz="-0.00082680914128389" izz="0.019742351284554" />
+            <mass value="8.337463854486" />
+        </inertial>
+        <collision name="ccc5">
+            <origin xyz="-0.000000 -0.000000 0.000000" rpy="-3.141593 3.141593 3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccc5_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="ccc5">
+            <origin xyz="-0.000000 -0.000000 0.000000" rpy="-3.141593 3.141593 3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccc5_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039 0.921569 0.929412 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="ccrc7" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="ccc5" />
+        <child link="ccrc7" />
+        <origin xyz="-0.126999 0.000405 0.249000" rpy="0.003185 1.570796 0.000000" />
+    </joint>
+    <link name="ccrc7">
+        <inertial>
+            <origin xyz="0.000035 -0.000160 -0.053854" rpy="-0.000000 -1.570796 0.000000" />
+            <inertia ixy="-1.3370870491991e-05" ixx="0.00033629394542002" iyy="0.00037296161343245" ixz="2.7012428290626e-08" iyz="-4.8432118728765e-07" izz="0.00034750850016726" />
+            <mass value="0.48016641834598" />
+        </inertial>
+        <collision name="ccrc7">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="-0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccrc7_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="ccrc7">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="-0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccrc7_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.831373 0.839216 0.831373 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="ccrc8" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="ccrc7" />
+        <child link="ccrc8" />
+        <origin xyz="0.000000 -0.033251 -0.078106" rpy="-3.141593 4.709204 1.570796" />
+    </joint>
+    <link name="ccrc8">
+        <inertial>
+            <origin xyz="-0.000001 0.032181 0.011310" rpy="-1.570796 3.141593 3.141593" />
+            <inertia ixy="-2.7379758537549e-10" ixx="7.8641713521073e-05" iyy="8.1655383254669e-05" ixz="-1.0154096713772e-09" iyz="1.6824995999099e-05" izz="7.1166614524138e-05" />
+            <mass value="0.10956289231455" />
+        </inertial>
+        <collision name="ccrc8">
+            <origin xyz="0.000000 0.000000 -0.000000" rpy="-1.570796 3.141593 3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccrc8_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="ccrc8">
+            <origin xyz="0.000000 0.000000 -0.000000" rpy="-1.570796 3.141593 3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccrc8_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.831373 0.839216 0.831373 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="ccrc9" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="ccrc8" />
+        <child link="ccrc9" />
+        <origin xyz="0.000107 0.048000 0.033500" rpy="-1.570796 3.138407 3.141593" />
+    </joint>
+    <link name="ccrc9">
+        <inertial>
+            <origin xyz="0.000749 0.000006 -0.110159" rpy="-3.141593 3.141593 -3.141593" />
+            <inertia ixy="-3.1199513179988e-09" ixx="0.00046246362282982" iyy="0.00042685140250279" ixz="1.1536054347765e-05" iyz="4.2342376206021e-08" izz="0.00012998953696161" />
+            <mass value="0.21484349522083" />
+        </inertial>
+        <collision name="ccrc9">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="-3.141593 3.141593 -3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccrc9_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="ccrc9">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="-3.141593 3.141593 -3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccrc9_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792157 0.819608 0.933333 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="ccrc10" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="ccrc9" />
+        <child link="ccrc10" />
+        <origin xyz="-0.031000 0.000099 -0.191400" rpy="0.003185 1.570796 0.000000" />
+    </joint>
+    <link name="ccrc10">
+        <inertial>
+            <origin xyz="0.040374 -0.000012 0.014826" rpy="0.000000 -1.570796 0.000000" />
+            <inertia ixy="1.3042582563859e-09" ixx="0.00013819187414251" iyy="0.00014070547368252" ixz="3.7568303465705e-05" iyz="1.0405138052277e-09" izz="8.161047327886e-05" />
+            <mass value="0.10154729008015" />
+        </inertial>
+        <collision name="ccrc10">
+            <origin xyz="0.000000 -0.000000 0.000000" rpy="0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccrc10_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="ccrc10">
+            <origin xyz="0.000000 -0.000000 0.000000" rpy="0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccrc10_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039 0.917647 0.929412 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="ccrc11" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="ccrc10" />
+        <child link="ccrc11" />
+        <origin xyz="0.108400 -0.000099 0.031000" rpy="-1.570796 4.709204 1.570796" />
+    </joint>
+    <link name="ccrc11">
+        <inertial>
+            <origin xyz="-0.017053 -0.000019 -0.065642" rpy="-3.141593 3.141593 -3.141593" />
+            <inertia ixy="2.8089273884613e-08" ixx="0.00015620835726961" iyy="0.00012311032185469" ixz="2.9662029845737e-06" iyz="-6.15024744954e-09" izz="4.6324802581108e-05" />
+            <mass value="0.20240470445657" />
+        </inertial>
+        <collision name="ccrc11">
+            <origin xyz="0.000000 -0.000000 0.000000" rpy="-3.141593 3.141593 -3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccrc11_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="ccrc11">
+            <origin xyz="0.000000 -0.000000 0.000000" rpy="-3.141593 3.141593 -3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccrc11_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039 0.917647 0.929412 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="ccrc12" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="ccrc11" />
+        <child link="ccrc12" />
+        <origin xyz="-0.022250 0.000071 -0.114250" rpy="0.003185 1.570796 0.000000" />
+    </joint>
+    <link name="ccrc12">
+        <inertial>
+            <origin xyz="-0.000049 0.000082 0.032153" rpy="0.000000 -1.570796 0.000000" />
+            <inertia ixy="1.5881535322483e-09" ixx="1.5450751314103e-05" iyy="2.8255309710312e-05" ixz="8.3101702133992e-11" iyz="7.5540688170768e-12" izz="1.6544349769746e-05" />
+            <mass value="0.036753308924646" />
+        </inertial>
+        <collision name="ccrc12">
+            <origin xyz="-0.000000 -0.000000 0.000000" rpy="0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccrc12_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="ccrc12">
+            <origin xyz="-0.000000 -0.000000 0.000000" rpy="0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccrc12_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792157 0.819608 0.933333 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="ccrc13" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="ccrc12" />
+        <child link="ccrc13" />
+        <origin xyz="0.000000 -0.028605 0.032909" rpy="3.141593 4.709204 1.570796" />
+    </joint>
+    <link name="ccrc13">
+        <inertial>
+            <origin xyz="0.005061 0.116666 0.017737" rpy="-1.570796 3.141593 3.141593" />
+            <inertia ixy="-1.530340920767e-05" ixx="0.00021663984386653" iyy="0.00017526304341989" ixz="2.09967436214e-06" iyz="1.0328901635726e-05" izz="0.00021306602498679" />
+            <mass value="0.48230836386647" />
+        </inertial>
+        <collision name="ccrc13">
+            <origin xyz="0.000000 0.000000 -0.000000" rpy="-1.570796 3.141593 3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccrc13_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="ccrc13">
+            <origin xyz="0.000000 0.000000 -0.000000" rpy="-1.570796 3.141593 3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccrc13_vis_1.dae" />
+            </geometry>
+            <material name="c">
+                <color rgba="0.792157 0.819608 0.933333 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="cclc7" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="ccc5" />
+        <child link="cclc7" />
+        <origin xyz="0.126999 -0.000405 0.249000" rpy="0.003185 1.570796 0.000000" />
+    </joint>
+    <link name="cclc7">
+        <inertial>
+            <origin xyz="0.000033 -0.000160 0.053855" rpy="-0.000000 -1.570796 0.000000" />
+            <inertia ixy="1.4430824056398e-05" ixx="0.00033649365971625" iyy="0.00037296155179275" ixz="-1.5207149734352e-07" iyz="1.2237583743521e-07" izz="0.00034730872457881" />
+            <mass value="0.48016552110815" />
+        </inertial>
+        <collision name="cclc7">
+            <origin xyz="-0.000000 -0.000000 -0.000000" rpy="-0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_cclc7_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="cclc7">
+            <origin xyz="-0.000000 -0.000000 -0.000000" rpy="-0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_cclc7_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.831373 0.839216 0.831373 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="cclc8" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="cclc7" />
+        <child link="cclc8" />
+        <origin xyz="-0.000000 -0.033748 0.077893" rpy="-3.141593 4.709204 1.570796" />
+    </joint>
+    <link name="cclc8">
+        <inertial>
+            <origin xyz="-0.000001 0.032181 0.011310" rpy="-1.570796 3.141593 3.141593" />
+            <inertia ixy="-2.7379758314655e-10" ixx="7.8641713521072e-05" iyy="8.1655383254679e-05" ixz="-1.0154096723934e-09" iyz="1.6824995999095e-05" izz="7.1166614524126e-05" />
+            <mass value="0.10956289231455" />
+        </inertial>
+        <collision name="cclc8">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="-1.570796 3.141593 3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_cclc8_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="cclc8">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="-1.570796 3.141593 3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_cclc8_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.831373 0.839216 0.831373 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="cclc9" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="cclc8" />
+        <child link="cclc9" />
+        <origin xyz="0.000107 0.048000 0.033500" rpy="-1.570796 3.138407 3.141593" />
+    </joint>
+    <link name="cclc9">
+        <inertial>
+            <origin xyz="-0.002292 0.000006 -0.149583" rpy="-3.141593 3.141593 -3.141593" />
+            <inertia ixy="-6.4093880914961e-07" ixx="0.00058257176182849" iyy="0.0005491801765778" ixz="-1.1429520194728e-05" iyz="-1.8477125639979e-07" izz="0.00025243998430458" />
+            <mass value="0.41694886979271" />
+        </inertial>
+        <collision name="cclc9">
+            <origin xyz="-0.000000 0.000000 0.000000" rpy="-3.141593 3.141593 -3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_cclc9_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="cclc9">
+            <origin xyz="-0.000000 0.000000 0.000000" rpy="-3.141593 3.141593 -3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_cclc9_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792157 0.819608 0.933333 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="cclc10" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="cclc9" />
+        <child link="cclc10" />
+        <origin xyz="0.031000 -0.000099 -0.191400" rpy="0.003185 1.570796 0.000000" />
+    </joint>
+    <link name="cclc10">
+        <inertial>
+            <origin xyz="0.040374 0.000002 -0.014833" rpy="0.000000 -1.570796 0.000000" />
+            <inertia ixy="1.3415306390576e-09" ixx="0.00013819189566108" iyy="0.0001407054521636" ixz="-3.7568303465976e-05" iyz="-1.0405130068285e-09" izz="8.1610473279221e-05" />
+            <mass value="0.10154729008015" />
+        </inertial>
+        <collision name="cclc10">
+            <origin xyz="-0.000000 0.000000 -0.000000" rpy="0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_cclc10_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="cclc10">
+            <origin xyz="-0.000000 0.000000 -0.000000" rpy="0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_cclc10_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039 0.917647 0.929412 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="cclc11" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="cclc10" />
+        <child link="cclc11" />
+        <origin xyz="0.108400 0.000099 -0.031000" rpy="-1.570796 4.709204 1.570796" />
+    </joint>
+    <link name="cclc11">
+        <inertial>
+            <origin xyz="0.016764 0.000035 -0.065627" rpy="-3.141593 3.141593 -3.141593" />
+            <inertia ixy="2.808927393757e-08" ixx="0.00015620835726958" iyy="0.00012311034149391" ixz="-2.9662029850983e-06" iyz="6.1682445742143e-09" izz="4.6324782941913e-05" />
+            <mass value="0.20240470445657" />
+        </inertial>
+        <collision name="cclc11">
+            <origin xyz="0.000000 -0.000000 0.000000" rpy="-3.141593 3.141593 -3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_cclc11_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="cclc11">
+            <origin xyz="0.000000 -0.000000 0.000000" rpy="-3.141593 3.141593 -3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_cclc11_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792157 0.819608 0.933333 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="cclc12" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="cclc11" />
+        <child link="cclc12" />
+        <origin xyz="0.022250 -0.000071 -0.114250" rpy="0.003185 1.570796 0.000000" />
+    </joint>
+    <link name="cclc12">
+        <inertial>
+            <origin xyz="0.000053 0.000082 -0.032018" rpy="0.000000 -1.570796 0.000000" />
+            <inertia ixy="-1.5881535371098e-09" ixx="1.5450767905289e-05" iyy="2.8255309710314e-05" ixz="6.3634936240385e-11" iyz="-7.5539078225666e-12" izz="1.6544333178561e-05" />
+            <mass value="0.036753308924651" />
+        </inertial>
+        <collision name="cclc12">
+            <origin xyz="-0.000000 0.000000 0.000000" rpy="0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_cclc12_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="cclc12">
+            <origin xyz="-0.000000 0.000000 0.000000" rpy="0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_cclc12_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039 0.917647 0.929412 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="cclc13" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="cclc12" />
+        <child link="cclc13" />
+        <origin xyz="0.000000 -0.028395 -0.033091" rpy="3.141593 4.709204 1.570796" />
+    </joint>
+    <link name="cclc13">
+        <inertial>
+            <origin xyz="-0.004248 0.103360 0.017311" rpy="-1.570796 3.141593 3.141593" />
+            <inertia ixy="1.4670740938952e-05" ixx="0.00017118405040021" iyy="0.00013248306586118" ixz="-3.7933870028674e-07" iyz="1.2192441722491e-05" izz="0.00015104063425177" />
+            <mass value="0.29917614843014" />
+        </inertial>
+        <collision name="cclc13">
+            <origin xyz="0.000000 0.000000 -0.000000" rpy="-1.570796 3.141593 3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_cclc13_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="cclc13">
+            <origin xyz="0.000000 0.000000 -0.000000" rpy="-1.570796 3.141593 3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_cclc13_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792157 0.819608 0.933333 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="ccrl" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="robot_base" />
+        <child link="ccrl" />
+        <origin xyz="-0.040000 -0.170000 0.095000" rpy="-1.570796 1.570800 0.000000" />
+    </joint>
+    <link name="ccrl">
+        <inertial>
+            <origin xyz="-0.000015 -0.000017 -0.027535" rpy="-0.000000 -1.570796 0.000000" />
+            <inertia ixy="-1.3664245981648e-08" ixx="0.0050169109719972" iyy="0.0027176948996581" ixz="-5.4055260578491e-07" iyz="1.3919704607807e-07" izz="0.0027187469177567" />
+            <mass value="1.1569607084394" />
+        </inertial>
+        <collision name="ccrl">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="-0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccrl_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="ccrl">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="-0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccrl_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.439216 0.439216 0.439216 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="ccll" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="robot_base" />
+        <child link="ccll" />
+        <origin xyz="-0.040000 0.170000 0.095000" rpy="-1.570796 1.570800 0.000000" />
+    </joint>
+    <link name="ccll">
+        <inertial>
+            <origin xyz="-0.000015 0.000017 0.027535" rpy="-0.000000 -1.570796 0.000000" />
+            <inertia ixy="-1.3699017074007e-08" ixx="0.0050169106729459" iyy="0.002717694846791" ixz="5.4053353750123e-07" iyz="-1.3921905599722e-07" izz="0.0027187465942343" />
+            <mass value="1.1569606432063" />
+        </inertial>
+        <collision name="ccll">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="-0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccll_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="ccll">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="-0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccll_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.439216 0.439216 0.439216 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="ccw1" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="robot_base" />
+        <child link="ccw1" />
+        <origin xyz="-0.378500 -0.000000 0.048000" rpy="3.141593 3.141593 -1.570796" />
+    </joint>
+    <link name="ccw1">
+        <inertial>
+            <origin xyz="0.000000 0.001956 -0.012321" rpy="3.141593 3.141593 3.141593" />
+            <inertia ixy="1.0215314500542e-10" ixx="3.2794230310704e-05" iyy="1.5925918111019e-05" ixz="4.4289883786882e-11" iyz="-1.2914554059055e-06" izz="2.9679724927946e-05" />
+            <mass value="0.14287907502716" />
+        </inertial>
+        <collision name="ccw1">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="3.141593 3.141593 3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccw1_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="ccw1">
+            <origin xyz="0.000000 0.000000 0.000000" rpy="3.141593 3.141593 3.141593" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccw1_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="0.647059 0.619608 0.588235 1.0" />
+            </material>
+        </visual>
+    </link>
+    <joint name="ccw2" type="revolute">
+        <axis xyz="0 0 1" />
+        <limit effort="0.0" velocity="0.0" lower="0.0" upper="1.7453292519676e-05" />
+        <parent link="ccw1" />
+        <child link="ccw2" />
+        <origin xyz="-0.002943 0.018009 -0.026000" rpy="0.003185 1.570796 0.000000" />
+    </joint>
+    <link name="ccw2">
+        <inertial>
+            <origin xyz="-0.000000 -0.000000 0.003000" rpy="-0.000000 -1.570796 0.000000" />
+            <inertia ixy="1.7194768829262e-22" ixx="1.2057377060863e-05" iyy="6.5797481961304e-06" ixz="8.4777100564725e-23" iyz="-6.8779075317049e-22" izz="6.5797481961304e-06" />
+            <mass value="0.060734017831793" />
+        </inertial>
+        <collision name="ccw2">
+            <origin xyz="-0.000000 -0.000000 -0.000000" rpy="-0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccw2_coll_1.dae" />
+            </geometry>
+        </collision>
+        <visual name="ccw2">
+            <origin xyz="-0.000000 -0.000000 -0.000000" rpy="-0.000000 -1.570796 0.000000" />
+            <geometry>
+                <mesh filename="file:///home/cmy/wbot01/ws/src/wbc_rl/v8/agvl.SLDASM_ccw2_vis_1.dae" />
+            </geometry>
+            <material name="">
+                <color rgba="1.000000 1.000000 1.000000 1.0" />
+            </material>
+        </visual>
+    </link>
+</robot>
