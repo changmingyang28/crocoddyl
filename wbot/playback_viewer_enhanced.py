@@ -19,7 +19,7 @@ import matplotlib.pyplot as plt
 
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-URDF_PATH = os.path.join(SCRIPT_DIR, "description/urdf/wbot.urdf")
+MJCF_PATH = os.path.join(SCRIPT_DIR, "description/urdf/wbot_v2.xml")
 MESH_DIR = os.path.join(SCRIPT_DIR, "description/dae")
 TRAJ_FILE = os.path.join(SCRIPT_DIR, "wbot_trajectory.npz")
 
@@ -51,23 +51,23 @@ def build_robot_with_visuals():
         SCRIPT_DIR,
     ]
 
-    # 简单检查关键 mesh 是否存在，提前给出错误信息
-    base_mesh = os.path.join(MESH_DIR, "agvl.SLDASM_base_link_visual_vis_1.dae")
-    if not os.path.exists(base_mesh):
-        raise FileNotFoundError(
-            f"未找到 mesh 文件: {base_mesh}\n"
-            f"请确保DAE文件位于: {MESH_DIR}/"
-        )
+    # v2 URDF 使用 STL 文件，不需要检查 DAE
+    # 检查 STL mesh 是否存在
+    base_mesh_stl = os.path.join(SCRIPT_DIR, "description/meshes/base_link_1211_evt2.STL")
+    if not os.path.exists(base_mesh_stl):
+        print(f"  ⚠️  警告: STL mesh 文件未找到，将只加载几何模型")
+        print(f"     预期路径: {base_mesh_stl}")
 
     print(f"\n加载机器人模型:")
-    print(f"  - URDF: {os.path.basename(URDF_PATH)}")
+    print(f"  - MJCF: {os.path.basename(MJCF_PATH)}")
 
     try:
-        robot = pin.RobotWrapper.BuildFromURDF(
-            URDF_PATH,
-            package_dirs=package_dirs,
-            root_joint=pin.JointModelFreeFlyer(),
-        )
+        # 使用 MuJoCo XML 加载（包含 visual 和 collision models）
+        # MJCF 不需要 package_dirs，mesh 路径在 XML 中已指定
+        model, collision_model, visual_model = pin.buildModelsFromMJCF(MJCF_PATH)
+
+        # 创建 RobotWrapper
+        robot = pin.RobotWrapper(model, collision_model, visual_model)
 
         # 打印模型信息
         print(f"  ✓ 模型加载成功")

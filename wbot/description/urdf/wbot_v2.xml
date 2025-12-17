@@ -1,0 +1,153 @@
+<mujoco model="urdf简化装配体1211.SLDASM">
+  <compiler angle="radian" meshdir="../meshes/"/>
+
+  <option integrator="implicitfast"/>
+  <option gravity="0 0 -9.81"/>
+  <option timestep="0.002"/>
+
+  <default>
+    <joint armature="0.01" frictionloss="0.01" damping="0.01"/>
+    <position kp="1000" dampratio="0.4" />
+  </default>
+
+  <asset>
+    <mesh name="base_link_1211_evt2" content_type="model/stl" file="base_link_1211_evt2.STL"/>
+    <mesh name="caster yaw-u" content_type="model/stl" file="caster yaw-u.STL"/>
+    <mesh name="caster wheel-u" content_type="model/stl" file="caster wheel-u.STL"/>
+    <mesh name="right wheel-u" content_type="model/stl" file="right wheel-u.STL"/>
+    <mesh name="left wheel-u" content_type="model/stl" file="left wheel-u.STL"/>
+    <mesh name="right s10 camera-u" content_type="model/stl" file="right s10 camera-u.STL"/>
+    <mesh name="left s10 camera-u" content_type="model/stl" file="left s10 camera-u.STL"/>
+    <mesh name="lower leg-u" content_type="model/stl" file="lower leg-u.STL"/>
+    <mesh name="upper leg-u" content_type="model/stl" file="upper leg-u.STL"/>
+    <mesh name="waist pitch" content_type="model/stl" file="waist pitch.STL"/>
+    <mesh name="waist roll-u" content_type="model/stl" file="waist roll-u.STL"/>
+    <mesh name="waist yaw-u" content_type="model/stl" file="waist yaw-u.STL"/>
+    <mesh name="right arm-u" content_type="model/stl" file="right arm-u.STL"/>
+    <mesh name="left arm-u" content_type="model/stl" file="left arm-u.STL"/>
+    <mesh name="lidar-u" content_type="model/stl" file="lidar-u.STL"/>
+    <mesh name="345 camera front-u" content_type="model/stl" file="345 camera front-u.STL"/>
+    <mesh name="345 camera back-u" content_type="model/stl" file="345 camera back-u.STL"/>
+
+    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0 0 0" width="512" height="512" />
+    <texture name="texplane" type="2d" builtin="checker" rgb1=".2 .3 .4" rgb2=".1 0.15 0.2" width="512" height="512" mark="cross" markrgb=".8 .8 .8" />
+    <material name="matplane" reflectance="0.3" texture="texplane" texrepeat="1 1" texuniform="true" />
+  </asset>
+
+  <worldbody>
+    <geom name="floor" pos="0 0 0" size="15 15 1" type="plane" material="matplane" margin="0.001" condim="3" friction="1.5 0.8 0.6" />
+    <light directional="true" diffuse=".4 .4 .4" specular="0.1 0.1 0.1" pos="0 0 5.0" dir="0 0 -1" castshadow="false" />
+    <light directional="true" diffuse=".6 .6 .6" specular="0.2 0.2 0.2" pos="0 0 4" dir="0 0 -1" />
+
+    <body name="Base_link" pos="0 0 0.0935" quat="1 0 0.0 0.0">
+    <inertial pos="-0.205219826588883 -0.00319066223054669 0.00930572474901213" quat="1 0 0.0 0.0" mass="5.32413170017573" diaginertia="0.077068959488456 0.0890185263360713 0.157749815446039"/>
+    <freejoint name="base_link" />
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.584314 0.701961 0 1" mesh="base_link_1211_evt2"/>
+    <!-- <geom type="mesh" rgba="0.584314 0.701961 0 1" mesh="base_link_1211_evt2"/> -->
+    
+    <!-- <geom pos="0.08545 -0.1245 -0.012" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="right s10 camera-u"/> -->
+    <!-- <geom pos="0.08545 -0.1245 -0.012" quat="1 0 0 0" type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="right s10 camera-u"/> -->
+    
+    <!-- <geom pos="0.08545 0.1245 -0.012" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="left s10 camera-u"/> -->
+    <!-- <geom pos="0.08545 0.1245 -0.012" quat="1 0 0 0" type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="left s10 camera-u"/> -->
+    
+    <body name="caster yaw-u" pos="-0.385 0 -0.0012">
+      <inertial pos="-0.0129501 9.6275e-05 -0.0233043" quat="0.93116 0.000837014 -0.364522 -0.00803487" mass="0.0281386" diaginertia="2.89118e-05 2.27506e-05 1.63113e-05"/>
+      <joint name="caster_yaw" pos="0 0 0" axis="0 0 -1"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.792157 0.819608 0.933333 1" mesh="caster yaw-u"/>
+      <geom type="mesh" rgba="0.792157 0.819608 0.933333 1" mesh="caster yaw-u"/>
+      
+      <body name="caster wheel-u" pos="-0.032 0 -0.0548">
+        <inertial pos="-3.46552e-08 -3.95823e-10 2.04729e-08" quat="0.66414 -0.24273 -0.24273 0.66414" mass="0.158597" diaginertia="0.0001059 7.14296e-05 7.14294e-05"/>
+        <joint name="caster_rotate" pos="0 0 0" axis="0 -1 0"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.192157 0.176471 1 1" mesh="caster wheel-u"/>
+        <geom type="mesh" rgba="0.192157 0.176471 1 1" mesh="caster wheel-u"/>
+      </body>
+    </body>
+    
+    <body name="right wheel-u" pos="0 -0.15224 0">
+      <inertial pos="1.70257e-05 -0.0452826 1.78572e-05" quat="0.467102 0.530866 0.530722 0.46726" mass="3.12432" diaginertia="0.0135459 0.00734166 0.00733894"/>
+      <joint name="right" pos="0 0 0" axis="0 1 0"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.898039 0.917647 0.929412 1" mesh="right wheel-u"/>
+      <geom type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="right wheel-u"/>
+    </body>
+    
+    <body name="left wheel-u" pos="0 0.15224 0">
+      <inertial pos="-1.70235e-05 0.0452826 1.78558e-05" quat="0.530875 0.467091 0.46725 0.530731" mass="3.12432" diaginertia="0.0135459 0.00734166 0.00733894"/>
+      <joint name="left" pos="0 0 0" axis="0 1 0"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.898039 0.917647 0.929412 1" mesh="left wheel-u"/>
+      <geom type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="left wheel-u"/>
+    </body>
+    
+    <body name="lower leg-u" pos="-0.2 -0.0453 0.0275">
+      <inertial pos="0.00227103 0.0466715 0.211546" quat="0.705263 -0.00180991 0.00206667 0.70894" mass="3.04109" diaginertia="0.0585741 0.0553928 0.00354267"/>
+      <joint name="ankle" pos="0 0 0" axis="0 -1 0"/>
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="lower leg-u"/>
+      <!-- <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="lower leg-u"/> -->
+      
+      <body name="upper leg-u" pos="0 0.0856 0.434">
+        <inertial pos="0.00897833 -0.0356025 0.227377" quat="0.706868 -0.00443012 0.00375675 0.707322" mass="4.43683" diaginertia="0.0784604 0.0735748 0.0056509"/>
+        <joint name="knee" pos="0 0 0" axis="0 1 0"/>
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="upper leg-u"/>
+        <!-- <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="upper leg-u"/> -->
+        
+        <body name="waist pitch" pos="0 -0.0806 0.4222">
+          <inertial pos="-0.042007 0.0428333 0.083091" quat="0.375666 0.527478 -0.637391 0.417581" mass="2.26302" diaginertia="0.00540056 0.00495495 0.00474284"/>
+          <joint name="hip" pos="0 0 0" axis="0 -1 0"/>
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="waist pitch"/>
+          <!-- <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="waist pitch"/> -->
+          
+          <body name="waist roll-u" pos="-0.0072 0.0403 0.1057">
+            <inertial pos="-0.0167724 6.40679e-07 0.0393792" quat="1.01293e-05 0.817824 1.43953e-05 0.575468" mass="0.569027" diaginertia="0.00120447 0.00104987 0.000516181"/>
+            <joint name="waist_roll" pos="0 0 0" axis="-1 0 0"/>
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.898039 0.917647 0.929412 1" mesh="waist roll-u"/>
+            <!-- <geom type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="waist roll-u"/> -->
+            
+            <body name="waist yaw-u" pos="0.0072 0 0.1473">
+              <inertial pos="0.0101786 -0.0036856 0.0389433" quat="0.835219 -0.083962 -0.0344578 0.542376" mass="5.08903" diaginertia="0.0361551 0.0322329 0.0217834"/>
+              <joint name="waist_yaw" pos="0 0 0" axis="0 0 -1"/>
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.752941 0.752941 0.752941 1" mesh="waist yaw-u"/>
+              <!-- <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="waist yaw-u"/> -->
+              
+              <!-- <geom pos="0.089501 0 -0.023" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.898039 0.917647 0.929412 1" mesh="lidar-u"/> -->
+              <!-- <geom pos="0.089501 0 -0.023" type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="lidar-u"/> -->
+              
+              <!-- <geom pos="0.1082 0 0.1582" quat="1 0 0 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.898039 0.917647 0.929412 1" mesh="345 camera front-u"/> -->
+              <!-- <geom pos="0.1082 0 0.1582" quat="1 0 0 0" type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="345 camera front-u"/> -->
+              
+              <!-- <geom pos="-0.088039 0 0.0056" quat="0.965926 0 -0.25882 0" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.898039 0.917647 0.929412 1" mesh="345 camera back-u"/> -->
+              <!-- <geom pos="-0.088039 0 0.0056" quat="0.965926 0 -0.25882 0" type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="345 camera back-u"/> -->
+              
+              <body name="right arm-u" pos="0 -0.117 0.1852">
+                <inertial pos="-9.30497e-08 -0.0830359 -0.238075" quat="0.999598 0.0283672 0 0" mass="4.29278" diaginertia="0.184539 0.183075 0.00313035"/>
+                <joint name="right_arm_pitch" pos="0 0 0" axis="0 -1 0"/>
+                <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.898039 0.917647 0.929412 1" mesh="right arm-u"/>
+                <!-- <geom type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="right arm-u"/> -->
+              </body>
+              
+              <body name="left arm-u" pos="0 0.117 0.1852">
+                <inertial pos="9.30497e-08 0.0830359 -0.238075" quat="0.999598 -0.0283672 0 0" mass="4.29278" diaginertia="0.184539 0.183075 0.00313035"/>
+                <joint name="left_arm_pitch" pos="0 0 0" axis="0 1 0"/>
+                <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.898039 0.917647 0.929412 1" mesh="left arm-u"/>
+                <!-- <geom type="mesh" rgba="0.898039 0.917647 0.929412 1" mesh="left arm-u"/> -->
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+    </body>
+  </worldbody>
+
+    <actuator>
+    <velocity name="right" joint="right" ctrlrange="-10 20" kv="25"/>
+    <velocity name="left" joint="left" ctrlrange="-10 20" kv="25"/>
+
+    <position name="ankle" joint="ankle" ctrlrange="-3.14 3.14" kp="10000" dampratio="0.2" forcerange="-120 120"/>
+    <position name="knee" joint="knee"  ctrlrange="-3.14 3.14" kp="5000" dampratio="0.5" forcerange="-120 120"/>
+    <position name="hip" joint="hip"  ctrlrange="-3.14 3.14" kp="2000" dampratio="0.7" forcerange="-120 120"/>
+    <position name="waist_roll" joint="waist_roll"  ctrlrange="-3.14 3.14" />
+    <position name="waist_yaw" joint="waist_yaw"  ctrlrange="-3.14 3.14" />
+  </actuator>
+
+</mujoco>

@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="urdf简化装配体1211.SLDASM">
+  <link
+    name="base_link_1211_evt2">
+    <inertial>
+      <origin
+        xyz="-0.205219826588883 -0.00319066223054669 0.00930572474901213"
+        rpy="0 0 0" />
+      <mass
+        value="5.32413170017573" />
+      <inertia
+        ixx="0.077068959488456"
+        ixy="0.000327924057164089"
+        ixz="0.00212118306880777"
+        iyy="0.0890185263360713"
+        iyz="-0.000178878545674747"
+        izz="0.157749815446039" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/base_link_1211_evt2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.584313725490196 0.701960784313725 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/base_link_1211_evt2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="caster yaw-u">
+    <inertial>
+      <origin
+        xyz="-0.0129501147037586 9.62750396166388E-05 -0.0233043343307543"
+        rpy="0 0 0" />
+      <mass
+        value="0.0281386444271825" />
+      <inertia
+        ixx="2.31034366246215E-05"
+        ixy="-5.16494313749424E-08"
+        ixz="6.28016538890743E-06"
+        iyy="2.27519928541068E-05"
+        iyz="-8.54639506616855E-08"
+        izz="2.2118323644151E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/caster yaw-u.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/caster yaw-u.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_yaw"
+    type="continuous">
+    <origin
+      xyz="-0.385 0 -0.0012"
+      rpy="0 0 0" />
+    <parent
+      link="base_link_1211_evt2" />
+    <child
+      link="caster yaw-u" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="caster wheel-u">
+    <inertial>
+      <origin
+        xyz="-3.46552371799369E-08 -3.9582331067948E-10 2.04728648270369E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.158596757595477" />
+      <inertia
+        ixx="7.1429488863188E-05"
+        ixy="-4.53302765489401E-12"
+        ixz="7.79431964293285E-11"
+        iyy="0.000105900102876324"
+        iyz="-2.18628395674214E-12"
+        izz="7.14294622318801E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/caster wheel-u.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.192156862745098 0.176470588235294 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/caster wheel-u.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_rotate"
+    type="continuous">
+    <origin
+      xyz="-0.032 0 -0.0548"
+      rpy="0 0 0" />
+    <parent
+      link="caster yaw-u" />
+    <child
+      link="caster wheel-u" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="right wheel-u">
+    <inertial>
+      <origin
+        xyz="1.70257413224837E-05 -0.0452825834663686 1.78571751600683E-05"
+        rpy="0 0 0" />
+      <mass
+        value="3.12432363443419" />
+      <inertia
+        ixx="0.00733898514589799"
+        ixy="2.84709041202681E-08"
+        ixz="3.42683479649129E-07"
+        iyy="0.0135458543457778"
+        iyz="1.88570775937042E-06"
+        izz="0.00734161892644889" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/right wheel-u.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/right wheel-u.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel"
+    type="continuous">
+    <origin
+      xyz="0 -0.15224 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link_1211_evt2" />
+    <child
+      link="right wheel-u" />
+    <axis
+      xyz="0 -1 0" />
+  </joint>
+  <link
+    name="left wheel-u">
+    <inertial>
+      <origin
+        xyz="-1.70235268312915E-05 0.0452825841164715 1.78558407655708E-05"
+        rpy="0 0 0" />
+      <mass
+        value="3.1243237213127" />
+      <inertia
+        ixx="0.00733898527717443"
+        ixy="2.86530880823481E-08"
+        ixz="-3.4282417915535E-07"
+        iyy="0.0135458547434033"
+        iyz="-1.88581084544857E-06"
+        izz="0.00734161928610971" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/left wheel-u.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/left wheel-u.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel"
+    type="continuous">
+    <origin
+      xyz="0 0.15224 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link_1211_evt2" />
+    <child
+      link="left wheel-u" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="right s10 camera-u">
+    <inertial>
+      <origin
+        xyz="-0.0193750931985582 0.00178564972364571 1.98475055750245E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0843756764925001" />
+      <inertia
+        ixx="6.46106458428726E-05"
+        ixy="4.34932818364867E-07"
+        ixz="2.34262539121985E-09"
+        iyy="8.86110260105309E-06"
+        iyz="5.10274240213728E-09"
+        izz="6.04881588853569E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/right s10 camera-u.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/right s10 camera-u.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right s10 camera"
+    type="fixed">
+    <origin
+      xyz="0.0854499999999999 -0.1245 -0.012"
+      rpy="0 0 0" />
+    <parent
+      link="base_link_1211_evt2" />
+    <child
+      link="right s10 camera-u" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left s10 camera-u">
+    <inertial>
+      <origin
+        xyz="-0.0193750931985582 -0.00178564972364573 -1.98475055750158E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0843756764925001" />
+      <inertia
+        ixx="6.46106458428725E-05"
+        ixy="-4.34932818364862E-07"
+        ixz="-2.34262539122401E-09"
+        iyy="8.8611026010531E-06"
+        iyz="5.10274240213598E-09"
+        izz="6.04881588853568E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/left s10 camera-u.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/left s10 camera-u.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left s10 camera-u"
+    type="fixed">
+    <origin
+      xyz="0.08545 0.1245 -0.012"
+      rpy="0 0 0" />
+    <parent
+      link="base_link_1211_evt2" />
+    <child
+      link="left s10 camera-u" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="lower leg-u">
+    <inertial>
+      <origin
+        xyz="0.002271028452796 0.0466715145561337 0.211545614238825"
+        rpy="0 0 0" />
+      <mass
+        value="3.04109217978147" />
+      <inertia
+        ixx="0.0553928569794445"
+        ixy="-1.66431569298422E-05"
+        ixz="-1.79970554795093E-05"
+        iyy="0.0585723622890167"
+        iyz="-0.000301744475753265"
+        izz="0.00354433038253933" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/lower leg-u.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/lower leg-u.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ankle"
+    type="revolute">
+    <origin
+      xyz="-0.2 -0.0453 0.0275"
+      rpy="0 0 0" />
+    <parent
+      link="base_link_1211_evt2" />
+    <child
+      link="lower leg-u" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="upper leg-u">
+    <inertial>
+      <origin
+        xyz="0.00897832581669258 -0.0356025389051581 0.227376644146869"
+        rpy="0 0 0" />
+      <mass
+        value="4.43682542121962" />
+      <inertia
+        ixx="0.0735747532706167"
+        ixy="-2.35931553225244E-06"
+        ixz="6.49665780501134E-05"
+        iyy="0.0784506798575518"
+        iyz="-0.000842894229728947"
+        izz="0.00566071753069115" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/upper leg-u.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/upper leg-u.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="knee"
+    type="revolute">
+    <origin
+      xyz="0 0.0856 0.434"
+      rpy="0 0 0" />
+    <parent
+      link="lower leg-u" />
+    <child
+      link="upper leg-u" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="waist pitch">
+    <inertial>
+      <origin
+        xyz="-0.0420070314111673 0.0428332861415177 0.0830909996428791"
+        rpy="0 0 0" />
+      <mass
+        value="2.26301728385751" />
+      <inertia
+        ixx="0.00496622900150261"
+        ixy="1.82218696141319E-05"
+        ixz="-6.90812251657797E-05"
+        iyy="0.00482936154365453"
+        iyz="-0.000219635180470962"
+        izz="0.00530276052695341" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/waist pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/waist pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hip"
+    type="revolute">
+    <origin
+      xyz="0 -0.0806 0.4222"
+      rpy="0 0 0" />
+    <parent
+      link="upper leg-u" />
+    <child
+      link="waist pitch" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="waist roll-u">
+    <inertial>
+      <origin
+        xyz="-0.0167723542590401 6.40679188065786E-07 0.0393792002417104"
+        rpy="0 0 0" />
+      <mass
+        value="0.569026984067384" />
+      <inertia
+        ixx="0.000594662338799633"
+        ixy="1.41183101762885E-09"
+        ixz="0.000218767277279619"
+        iyy="0.00104987361874437"
+        iyz="5.27569787668385E-09"
+        izz="0.00112599325870886" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/waist roll-u.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/waist roll-u.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="waist_roll"
+    type="revolute">
+    <origin
+      xyz="-0.0072 0.0403 0.1057"
+      rpy="0 0 0" />
+    <parent
+      link="waist pitch" />
+    <child
+      link="waist roll-u" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="waist yaw-u">
+    <inertial>
+      <origin
+        xyz="-2.43500335403157E-05 4.49919131860735E-07 0.0475349482896943"
+        rpy="0 0 0" />
+      <mass
+        value="3.95035372080972" />
+      <inertia
+        ixx="0.0243678370703529"
+        ixy="-1.78050959354361E-07"
+        ixz="-1.15159524812175E-06"
+        iyy="0.0284163020665568"
+        iyz="-7.38282119707497E-08"
+        izz="0.0102399152656495" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/waist yaw-u.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/waist yaw-u.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="waist_yaw"
+    type="revolute">
+    <origin
+      xyz="0.0072 0 0.1473"
+      rpy="0 0 0" />
+    <parent
+      link="waist roll-u" />
+    <child
+      link="waist yaw-u" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right arm-u">
+    <inertial>
+      <origin
+        xyz="-9.30497375262185E-08 -0.0830358934153477 -0.238075308800077"
+        rpy="0 0 0" />
+      <mass
+        value="4.29277834452243" />
+      <inertia
+        ixx="0.184539290583454"
+        ixy="-5.12205167463425E-09"
+        ixz="8.81064105172268E-08"
+        iyy="0.182495963672371"
+        iyz="0.0101884917990918"
+        izz="0.00370909004441352" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/right arm-u.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/right arm-u.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_arm_pitch"
+    type="revolute">
+    <origin
+      xyz="0 -0.117 0.1852"
+      rpy="0 0 0" />
+    <parent
+      link="waist yaw-u" />
+    <child
+      link="right arm-u" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left arm-u">
+    <inertial>
+      <origin
+        xyz="9.30497404405539E-08 0.0830358934153527 -0.238075308800077"
+        rpy="0 0 0" />
+      <mass
+        value="4.29277834452243" />
+      <inertia
+        ixx="0.184539290583453"
+        ixy="-5.12205167595265E-09"
+        ixz="-8.81064105329898E-08"
+        iyy="0.182495963672371"
+        iyz="-0.0101884917990919"
+        izz="0.00370909004441354" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/left arm-u.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/left arm-u.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_arm_pitch"
+    type="revolute">
+    <origin
+      xyz="0 0.117 0.1852"
+      rpy="0 0 0" />
+    <parent
+      link="waist yaw-u" />
+    <child
+      link="left arm-u" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="lidar-u">
+    <inertial>
+      <origin
+        xyz="-0.0226622511044115 -0.00027569771863315 0.0156436642987809"
+        rpy="0 0 0" />
+      <mass
+        value="0.70846271542868" />
+      <inertia
+        ixx="0.000587465343088863"
+        ixy="1.8256679643387E-08"
+        ixz="-1.08244066750393E-06"
+        iyy="0.000257608749379764"
+        iyz="-1.1250734527194E-07"
+        izz="0.000374175596350568" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/lidar-u.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/lidar-u.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar"
+    type="fixed">
+    <origin
+      xyz="0.089501 0 -0.023"
+      rpy="0 0 0" />
+    <parent
+      link="waist yaw-u" />
+    <child
+      link="lidar-u" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="345 camera front-u">
+    <inertial>
+      <origin
+        xyz="-0.0214721123676205 0.000657123112147633 0.000702337415614096"
+        rpy="0 0 0" />
+      <mass
+        value="0.215759522799549" />
+      <inertia
+        ixx="0.000351317647469958"
+        ixy="1.38037225219042E-06"
+        ixz="-1.11576551220952E-06"
+        iyy="4.80765478335487E-05"
+        iyz="5.07190820068644E-07"
+        izz="0.0003343587987428" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/345 camera front-u.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/345 camera front-u.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="345 camera front"
+    type="fixed">
+    <origin
+      xyz="0.1082 0 0.1582"
+      rpy="0 0 0" />
+    <parent
+      link="waist yaw-u" />
+    <child
+      link="345 camera front-u" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="345 camera back-u">
+    <inertial>
+      <origin
+        xyz="0.0213565731421667 0.000659922380182861 -0.000708797571272513"
+        rpy="0 0 0" />
+      <mass
+        value="0.214450000212721" />
+      <inertia
+        ixx="0.00034452917733791"
+        ixy="-1.38523094507927E-06"
+        ixz="-9.49127784147705E-07"
+        iyy="4.80332551446936E-05"
+        iyz="-5.4040636668883E-07"
+        izz="0.000328233929723538" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/345 camera back-u.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/345 camera back-u.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="345 camera back"
+    type="fixed">
+    <origin
+      xyz="-0.088039 0 0.0056"
+      rpy="0 -0.5236 0" />
+    <parent
+      link="waist yaw-u" />
+    <child
+      link="345 camera back-u" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
