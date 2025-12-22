@@ -1,0 +1,376 @@
+[0.046s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.046s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=28, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x713c3db0da20>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x713c3dc628f0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x713c3dc628f0>>, mixin_verb=('build',))
+[0.113s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.113s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.113s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.113s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.113s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.113s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.113s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/guanyu/crocoddyl/wbot/ros2_ws'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.113s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.118s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_bringup) by extension 'ignore'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_bringup) by extension 'ignore_ament_install'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_bringup) by extensions ['colcon_pkg']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_bringup) by extension 'colcon_pkg'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_bringup) by extensions ['colcon_meta']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_bringup) by extension 'colcon_meta'
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_bringup) by extensions ['ros']
+[0.119s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_bringup) by extension 'ros'
+[0.120s] DEBUG:colcon.colcon_core.package_identification:Package 'src/wbot_bringup' with type 'ros.ament_python' and name 'wbot_bringup'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_command) by extensions ['ignore', 'ignore_ament_install']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_command) by extension 'ignore'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_command) by extension 'ignore_ament_install'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_command) by extensions ['colcon_pkg']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_command) by extension 'colcon_pkg'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_command) by extensions ['colcon_meta']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_command) by extension 'colcon_meta'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_command) by extensions ['ros']
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_command) by extension 'ros'
+[0.120s] DEBUG:colcon.colcon_core.package_identification:Package 'src/wbot_command' with type 'ros.ament_python' and name 'wbot_command'
+[0.120s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_mpc) by extensions ['ignore', 'ignore_ament_install']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_mpc) by extension 'ignore'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_mpc) by extension 'ignore_ament_install'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_mpc) by extensions ['colcon_pkg']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_mpc) by extension 'colcon_pkg'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_mpc) by extensions ['colcon_meta']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_mpc) by extension 'colcon_meta'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_mpc) by extensions ['ros']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_mpc) by extension 'ros'
+[0.121s] DEBUG:colcon.colcon_core.package_identification:Package 'src/wbot_mpc' with type 'ros.ament_python' and name 'wbot_mpc'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_msgs) by extension 'ignore'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_msgs) by extension 'ignore_ament_install'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_msgs) by extensions ['colcon_pkg']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_msgs) by extension 'colcon_pkg'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_msgs) by extensions ['colcon_meta']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_msgs) by extension 'colcon_meta'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_msgs) by extensions ['ros']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_msgs) by extension 'ros'
+[0.121s] DEBUG:colcon.colcon_core.package_identification:Package 'src/wbot_msgs' with type 'ros.ament_cmake' and name 'wbot_msgs'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_simulator) by extensions ['ignore', 'ignore_ament_install']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_simulator) by extension 'ignore'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_simulator) by extension 'ignore_ament_install'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_simulator) by extensions ['colcon_pkg']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_simulator) by extension 'colcon_pkg'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_simulator) by extensions ['colcon_meta']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_simulator) by extension 'colcon_meta'
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_simulator) by extensions ['ros']
+[0.121s] Level 1:colcon.colcon_core.package_identification:_identify(src/wbot_simulator) by extension 'ros'
+[0.122s] DEBUG:colcon.colcon_core.package_identification:Package 'src/wbot_simulator' with type 'ros.ament_python' and name 'wbot_simulator'
+[0.122s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.122s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.122s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.122s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.122s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.135s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.135s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.136s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 286 installed packages in /opt/ros/humble
+[0.137s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.151s] Level 5:colcon.colcon_core.verb:set package 'wbot_msgs' build argument 'cmake_args' from command line to 'None'
+[0.151s] Level 5:colcon.colcon_core.verb:set package 'wbot_msgs' build argument 'cmake_target' from command line to 'None'
+[0.151s] Level 5:colcon.colcon_core.verb:set package 'wbot_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.151s] Level 5:colcon.colcon_core.verb:set package 'wbot_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.151s] Level 5:colcon.colcon_core.verb:set package 'wbot_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.151s] Level 5:colcon.colcon_core.verb:set package 'wbot_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.151s] Level 5:colcon.colcon_core.verb:set package 'wbot_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.151s] Level 5:colcon.colcon_core.verb:set package 'wbot_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.151s] Level 5:colcon.colcon_core.verb:set package 'wbot_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.151s] DEBUG:colcon.colcon_core.verb:Building package 'wbot_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs', 'merge_install': False, 'path': '/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_msgs', 'symlink_install': True, 'test_result_base': None}
+[0.151s] Level 5:colcon.colcon_core.verb:set package 'wbot_command' build argument 'cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_command' build argument 'cmake_target' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_command' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_command' build argument 'cmake_clean_cache' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_command' build argument 'cmake_clean_first' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_command' build argument 'cmake_force_configure' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_command' build argument 'ament_cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_command' build argument 'catkin_cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_command' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.152s] DEBUG:colcon.colcon_core.verb:Building package 'wbot_command' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_command', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command', 'merge_install': False, 'path': '/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_command', 'symlink_install': True, 'test_result_base': None}
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_mpc' build argument 'cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_mpc' build argument 'cmake_target' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_mpc' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_mpc' build argument 'cmake_clean_cache' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_mpc' build argument 'cmake_clean_first' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_mpc' build argument 'cmake_force_configure' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_mpc' build argument 'ament_cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_mpc' build argument 'catkin_cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_mpc' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.152s] DEBUG:colcon.colcon_core.verb:Building package 'wbot_mpc' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc', 'merge_install': False, 'path': '/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_mpc', 'symlink_install': True, 'test_result_base': None}
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_simulator' build argument 'cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_simulator' build argument 'cmake_target' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_simulator' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_simulator' build argument 'cmake_clean_cache' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_simulator' build argument 'cmake_clean_first' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_simulator' build argument 'cmake_force_configure' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_simulator' build argument 'ament_cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_simulator' build argument 'catkin_cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_simulator' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.152s] DEBUG:colcon.colcon_core.verb:Building package 'wbot_simulator' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator', 'merge_install': False, 'path': '/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_simulator', 'symlink_install': True, 'test_result_base': None}
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_bringup' build argument 'cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_bringup' build argument 'cmake_target' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.152s] Level 5:colcon.colcon_core.verb:set package 'wbot_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.152s] DEBUG:colcon.colcon_core.verb:Building package 'wbot_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup', 'merge_install': False, 'path': '/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_bringup', 'symlink_install': True, 'test_result_base': None}
+[0.152s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.153s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.153s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_msgs' with build type 'ament_cmake'
+[0.153s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_msgs'
+[0.154s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.154s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.154s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.158s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs
+[0.784s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs
+[0.785s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs -- -j28 -l28
+[0.943s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs -- -j28 -l28
+[0.947s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs
+[0.983s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wbot_msgs)
+[0.984s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs
+[0.985s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs' for CMake module files
+[0.985s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs' for CMake config files
+[0.985s] Level 1:colcon.colcon_core.shell:create_environment_hook('wbot_msgs', 'cmake_prefix_path')
+[0.985s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/hook/cmake_prefix_path.ps1'
+[0.986s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/hook/cmake_prefix_path.dsv'
+[0.986s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/hook/cmake_prefix_path.sh'
+[0.986s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib'
+[0.986s] Level 1:colcon.colcon_core.shell:create_environment_hook('wbot_msgs', 'ld_library_path_lib')
+[0.986s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/hook/ld_library_path_lib.ps1'
+[0.986s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/hook/ld_library_path_lib.dsv'
+[0.986s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/hook/ld_library_path_lib.sh'
+[0.987s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/bin'
+[0.987s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/pkgconfig/wbot_msgs.pc'
+[0.987s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/python3.10/site-packages'
+[0.987s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/bin'
+[0.987s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/package.ps1'
+[0.987s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/package.dsv'
+[0.988s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/package.sh'
+[0.988s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/package.bash'
+[0.988s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/package.zsh'
+[0.988s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/colcon-core/packages/wbot_msgs)
+[0.989s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wbot_msgs)
+[0.989s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs' for CMake module files
+[0.989s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs' for CMake config files
+[0.989s] Level 1:colcon.colcon_core.shell:create_environment_hook('wbot_msgs', 'cmake_prefix_path')
+[0.989s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/hook/cmake_prefix_path.ps1'
+[0.989s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/hook/cmake_prefix_path.dsv'
+[0.989s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/hook/cmake_prefix_path.sh'
+[0.990s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib'
+[0.990s] Level 1:colcon.colcon_core.shell:create_environment_hook('wbot_msgs', 'ld_library_path_lib')
+[0.990s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/hook/ld_library_path_lib.ps1'
+[0.990s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/hook/ld_library_path_lib.dsv'
+[0.990s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/hook/ld_library_path_lib.sh'
+[0.990s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/bin'
+[0.990s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/pkgconfig/wbot_msgs.pc'
+[0.990s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/python3.10/site-packages'
+[0.990s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/bin'
+[0.991s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/package.ps1'
+[0.991s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/package.dsv'
+[0.991s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/package.sh'
+[0.991s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/package.bash'
+[0.991s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/package.zsh'
+[0.991s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/colcon-core/packages/wbot_msgs)
+[0.992s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_command' with build type 'ament_python'
+[0.992s] Level 1:colcon.colcon_core.shell:create_environment_hook('wbot_command', 'ament_prefix_path')
+[0.992s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/share/wbot_command/hook/ament_prefix_path.ps1'
+[0.992s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/share/wbot_command/hook/ament_prefix_path.dsv'
+[0.992s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/share/wbot_command/hook/ament_prefix_path.sh'
+[0.992s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.992s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.994s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_mpc' with build type 'ament_python'
+[0.994s] Level 1:colcon.colcon_core.shell:create_environment_hook('wbot_mpc', 'ament_prefix_path')
+[0.994s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/share/wbot_mpc/hook/ament_prefix_path.ps1'
+[0.994s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/share/wbot_mpc/hook/ament_prefix_path.dsv'
+[0.994s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/share/wbot_mpc/hook/ament_prefix_path.sh'
+[0.994s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.994s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.995s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_simulator' with build type 'ament_python'
+[0.995s] Level 1:colcon.colcon_core.shell:create_environment_hook('wbot_simulator', 'ament_prefix_path')
+[0.995s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/share/wbot_simulator/hook/ament_prefix_path.ps1'
+[0.996s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/share/wbot_simulator/hook/ament_prefix_path.dsv'
+[0.996s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/share/wbot_simulator/hook/ament_prefix_path.sh'
+[0.996s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.996s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.107s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_command'
+[1.107s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.107s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.218s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_mpc'
+[1.218s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.218s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.323s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_simulator'
+[1.324s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.324s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.465s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/share/ament_index/resource_index/packages/wbot_mpc
+[1.465s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/share/wbot_mpc/package.xml
+[1.465s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/wbot_mpc/mpc_node
+[1.466s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc': AMENT_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs LD_LIBRARY_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/build --no-deps symlink_data --force
+[1.467s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_command': AMENT_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs LD_LIBRARY_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_command/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_command/build --no-deps symlink_data
+[1.472s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/share/ament_index/resource_index/packages/wbot_simulator
+[1.472s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/share/wbot_simulator/package.xml
+[1.472s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/lib/wbot_simulator/mujoco_node
+[1.473s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator': AMENT_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs LD_LIBRARY_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator/build --no-deps symlink_data --force
+[1.655s] Level 1:colcon.colcon_core.shell:create_environment_hook('wbot_mpc', 'pythonpath_develop')
+[1.655s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/share/wbot_mpc/hook/pythonpath_develop.ps1'
+[1.655s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc' returned '0': AMENT_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs LD_LIBRARY_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/build --no-deps symlink_data --force
+[1.655s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/share/wbot_mpc/hook/pythonpath_develop.dsv'
+[1.656s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/share/wbot_mpc/hook/pythonpath_develop.sh'
+[1.656s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc' for CMake module files
+[1.656s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc' for CMake config files
+[1.656s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib'
+[1.656s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/bin'
+[1.656s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/pkgconfig/wbot_mpc.pc'
+[1.656s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages'
+[1.656s] Level 1:colcon.colcon_core.shell:create_environment_hook('wbot_mpc', 'pythonpath')
+[1.656s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/share/wbot_mpc/hook/pythonpath.ps1'
+[1.657s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/share/wbot_mpc/hook/pythonpath.dsv'
+[1.657s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/share/wbot_mpc/hook/pythonpath.sh'
+[1.657s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/bin'
+[1.657s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wbot_mpc)
+[1.657s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/share/wbot_mpc/package.ps1'
+[1.658s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/share/wbot_mpc/package.dsv'
+[1.658s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/share/wbot_mpc/package.sh'
+[1.658s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/share/wbot_mpc/package.bash'
+[1.658s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/share/wbot_mpc/package.zsh'
+[1.659s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/share/colcon-core/packages/wbot_mpc)
+[1.662s] Level 1:colcon.colcon_core.shell:create_environment_hook('wbot_command', 'pythonpath_develop')
+[1.662s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_command' returned '0': AMENT_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs LD_LIBRARY_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_command/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_command/build --no-deps symlink_data
+[1.662s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_command/share/wbot_command/hook/pythonpath_develop.ps1'
+[1.662s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_command/share/wbot_command/hook/pythonpath_develop.dsv'
+[1.663s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_command/share/wbot_command/hook/pythonpath_develop.sh'
+[1.663s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command' for CMake module files
+[1.663s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command' for CMake config files
+[1.664s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/lib'
+[1.664s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/bin'
+[1.664s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/lib/pkgconfig/wbot_command.pc'
+[1.664s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/lib/python3.10/site-packages'
+[1.664s] Level 1:colcon.colcon_core.shell:create_environment_hook('wbot_command', 'pythonpath')
+[1.664s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/share/wbot_command/hook/pythonpath.ps1'
+[1.664s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/share/wbot_command/hook/pythonpath.dsv'
+[1.665s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/share/wbot_command/hook/pythonpath.sh'
+[1.665s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/bin'
+[1.665s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wbot_command)
+[1.665s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/share/wbot_command/package.ps1'
+[1.666s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/share/wbot_command/package.dsv'
+[1.666s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/share/wbot_command/package.sh'
+[1.666s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/share/wbot_command/package.bash'
+[1.667s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/share/wbot_command/package.zsh'
+[1.667s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/share/colcon-core/packages/wbot_command)
+[1.670s] Level 1:colcon.colcon_core.shell:create_environment_hook('wbot_simulator', 'pythonpath_develop')
+[1.670s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator' returned '0': AMENT_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs LD_LIBRARY_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator/build --no-deps symlink_data --force
+[1.671s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator/share/wbot_simulator/hook/pythonpath_develop.ps1'
+[1.671s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator/share/wbot_simulator/hook/pythonpath_develop.dsv'
+[1.671s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator/share/wbot_simulator/hook/pythonpath_develop.sh'
+[1.672s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator' for CMake module files
+[1.672s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator' for CMake config files
+[1.672s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/lib'
+[1.672s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/bin'
+[1.672s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/lib/pkgconfig/wbot_simulator.pc'
+[1.673s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/lib/python3.10/site-packages'
+[1.673s] Level 1:colcon.colcon_core.shell:create_environment_hook('wbot_simulator', 'pythonpath')
+[1.673s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/share/wbot_simulator/hook/pythonpath.ps1'
+[1.673s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/share/wbot_simulator/hook/pythonpath.dsv'
+[1.673s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/share/wbot_simulator/hook/pythonpath.sh'
+[1.674s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/bin'
+[1.674s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wbot_simulator)
+[1.674s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/share/wbot_simulator/package.ps1'
+[1.674s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/share/wbot_simulator/package.dsv'
+[1.675s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/share/wbot_simulator/package.sh'
+[1.675s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/share/wbot_simulator/package.bash'
+[1.675s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/share/wbot_simulator/package.zsh'
+[1.675s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/share/colcon-core/packages/wbot_simulator)
+[1.676s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_bringup' with build type 'ament_python'
+[1.676s] Level 1:colcon.colcon_core.shell:create_environment_hook('wbot_bringup', 'ament_prefix_path')
+[1.676s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/wbot_bringup/hook/ament_prefix_path.ps1'
+[1.676s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/wbot_bringup/hook/ament_prefix_path.dsv'
+[1.677s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/wbot_bringup/hook/ament_prefix_path.sh'
+[1.677s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.677s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.789s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_bringup'
+[1.790s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.790s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.941s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/ament_index/resource_index/packages/wbot_bringup
+[1.941s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/wbot_bringup/package.xml
+[1.941s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/wbot_bringup/launch/wbot_mpc_sim_only.launch.py
+[1.941s] DEBUG:colcon.colcon_core.task.python.build:While undoing a previous installation files outside the Python library path are being ignored: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/wbot_bringup/launch/wbot_mpc.launch.py
+[1.942s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup': AMENT_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs LD_LIBRARY_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_command:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup/build --no-deps symlink_data --force
+[2.139s] Level 1:colcon.colcon_core.shell:create_environment_hook('wbot_bringup', 'pythonpath_develop')
+[2.140s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup/share/wbot_bringup/hook/pythonpath_develop.ps1'
+[2.140s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup' returned '0': AMENT_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs LD_LIBRARY_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_command:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup/build --no-deps symlink_data --force
+[2.140s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup/share/wbot_bringup/hook/pythonpath_develop.dsv'
+[2.140s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup/share/wbot_bringup/hook/pythonpath_develop.sh'
+[2.141s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup' for CMake module files
+[2.141s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup' for CMake config files
+[2.142s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/lib'
+[2.142s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/bin'
+[2.142s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/lib/pkgconfig/wbot_bringup.pc'
+[2.142s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/lib/python3.10/site-packages'
+[2.142s] Level 1:colcon.colcon_core.shell:create_environment_hook('wbot_bringup', 'pythonpath')
+[2.142s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/wbot_bringup/hook/pythonpath.ps1'
+[2.142s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/wbot_bringup/hook/pythonpath.dsv'
+[2.142s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/wbot_bringup/hook/pythonpath.sh'
+[2.143s] Level 1:colcon.colcon_core.environment:checking '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/bin'
+[2.143s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(wbot_bringup)
+[2.143s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/wbot_bringup/package.ps1'
+[2.144s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/wbot_bringup/package.dsv'
+[2.144s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/wbot_bringup/package.sh'
+[2.144s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/wbot_bringup/package.bash'
+[2.144s] INFO:colcon.colcon_core.shell:Creating package script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/wbot_bringup/package.zsh'
+[2.145s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/colcon-core/packages/wbot_bringup)
+[2.145s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.145s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.145s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.145s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.147s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.147s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.147s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.154s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.154s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/local_setup.ps1'
+[2.155s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/guanyu/crocoddyl/wbot/ros2_ws/install/_local_setup_util_ps1.py'
+[2.156s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/setup.ps1'
+[2.156s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/local_setup.sh'
+[2.157s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/guanyu/crocoddyl/wbot/ros2_ws/install/_local_setup_util_sh.py'
+[2.157s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/setup.sh'
+[2.158s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/local_setup.bash'
+[2.158s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/setup.bash'
+[2.159s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/local_setup.zsh'
+[2.159s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/guanyu/crocoddyl/wbot/ros2_ws/install/setup.zsh'

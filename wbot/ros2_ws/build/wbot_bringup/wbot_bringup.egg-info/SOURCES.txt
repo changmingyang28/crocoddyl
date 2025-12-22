@@ -11,7 +11,11 @@ setup.py
 launch/wbot_mpc.launch.py
 launch/wbot_mpc_sim_only.launch.py
 resource/wbot_bringup
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py
 wbot_bringup/__init__.py
+wbot_bringup.egg-info/PKG-INFO
+wbot_bringup.egg-info/SOURCES.txt
+wbot_bringup.egg-info/dependency_links.txt
+wbot_bringup.egg-info/entry_points.txt
+wbot_bringup.egg-info/requires.txt
+wbot_bringup.egg-info/top_level.txt
+wbot_bringup.egg-info/zip-safe

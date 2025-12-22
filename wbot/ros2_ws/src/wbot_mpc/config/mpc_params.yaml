@@ -1,0 +1,29 @@
+wbot_mpc:
+  ros__parameters:
+    horizon_steps: 20
+    dt: 0.01
+    ddp_max_iters: 30
+    publish_performance: true
+
+    wheel_radius: 0.0935
+    wheel_base: 0.42
+    main_wheel_radius: 0.095
+    caster_radius: 0.048
+    base_height: 0.0935
+
+    body_pos_weight: 500.0
+    free_joint_pos_weight: 0.0
+    arm_pos_weight: 1000.0
+    body_vel_weight: 300.0
+    arm_vel_weight: 5000.0
+    wheel_vel_weight: 500.0
+
+    torso_xy_weight: 100.0
+    torso_pitch_weight: 500.0
+
+    state_reg_weight: 0.3
+    ctrl_reg_weight: 0.1
+
+    u_max: 60.0
+    body_v_limit: 1.0
+    arm_v_limit: 1.0

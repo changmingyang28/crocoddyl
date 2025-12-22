@@ -9,8 +9,12 @@ setup.py
 ../../build/wbot_simulator/wbot_simulator.egg-info/top_level.txt
 ../../build/wbot_simulator/wbot_simulator.egg-info/zip-safe
 resource/wbot_simulator
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py
 wbot_simulator/__init__.py
 wbot_simulator/mujoco_node.py
+wbot_simulator.egg-info/PKG-INFO
+wbot_simulator.egg-info/SOURCES.txt
+wbot_simulator.egg-info/dependency_links.txt
+wbot_simulator.egg-info/entry_points.txt
+wbot_simulator.egg-info/requires.txt
+wbot_simulator.egg-info/top_level.txt
+wbot_simulator.egg-info/zip-safe

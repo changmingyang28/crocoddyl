@@ -22,7 +22,7 @@ from collections import deque
 
 from wbot_msgs.msg import WbotState, WbotControl, VelocityCommand, MpcPerformance
 
-from .ocp import WbotOCP
+from .ocp import WbotOCP, WbotOCPConfig
 from .trajectory_generator import ExponentialTrajectory
 
 
@@ -43,6 +43,25 @@ class WbotMpcNode(Node):
         self.declare_parameter('dt', 0.05)
         self.declare_parameter('ddp_max_iters', 50)
         self.declare_parameter('publish_performance', True)
+        default_ocp_config = WbotOCPConfig()
+        self.declare_parameter('wheel_radius', default_ocp_config.wheel_radius)
+        self.declare_parameter('wheel_base', default_ocp_config.wheel_base)
+        self.declare_parameter('main_wheel_radius', default_ocp_config.main_wheel_radius)
+        self.declare_parameter('caster_radius', default_ocp_config.caster_radius)
+        self.declare_parameter('base_height', default_ocp_config.base_height)
+        self.declare_parameter('body_pos_weight', default_ocp_config.body_pos_weight)
+        self.declare_parameter('free_joint_pos_weight', default_ocp_config.free_joint_pos_weight)
+        self.declare_parameter('arm_pos_weight', default_ocp_config.arm_pos_weight)
+        self.declare_parameter('body_vel_weight', default_ocp_config.body_vel_weight)
+        self.declare_parameter('arm_vel_weight', default_ocp_config.arm_vel_weight)
+        self.declare_parameter('wheel_vel_weight', default_ocp_config.wheel_vel_weight)
+        self.declare_parameter('torso_xy_weight', default_ocp_config.torso_xy_weight)
+        self.declare_parameter('torso_pitch_weight', default_ocp_config.torso_pitch_weight)
+        self.declare_parameter('state_reg_weight', default_ocp_config.state_reg_weight)
+        self.declare_parameter('ctrl_reg_weight', default_ocp_config.ctrl_reg_weight)
+        self.declare_parameter('u_max', default_ocp_config.u_max)
+        self.declare_parameter('body_v_limit', default_ocp_config.body_v_limit)
+        self.declare_parameter('arm_v_limit', default_ocp_config.arm_v_limit)
 
         # Get parameters
         self.horizon_steps = self.get_parameter('horizon_steps').value
@@ -52,9 +71,40 @@ class WbotMpcNode(Node):
 
         # Initialize OCP solver
         self.get_logger().info('Initializing OCP solver...')
-        self.ocp_solver = WbotOCP(
-            mjcf_path='/home/guanyu/crocoddyl/wbot/description/urdf/wbot_v2.xml'
+        ocp_config = WbotOCPConfig(
+            wheel_radius=self.get_parameter('wheel_radius').value,
+            wheel_base=self.get_parameter('wheel_base').value,
+            main_wheel_radius=self.get_parameter('main_wheel_radius').value,
+            caster_radius=self.get_parameter('caster_radius').value,
+            base_height=self.get_parameter('base_height').value,
+            body_pos_weight=self.get_parameter('body_pos_weight').value,
+            free_joint_pos_weight=self.get_parameter('free_joint_pos_weight').value,
+            arm_pos_weight=self.get_parameter('arm_pos_weight').value,
+            body_vel_weight=self.get_parameter('body_vel_weight').value,
+            arm_vel_weight=self.get_parameter('arm_vel_weight').value,
+            wheel_vel_weight=self.get_parameter('wheel_vel_weight').value,
+            torso_xy_weight=self.get_parameter('torso_xy_weight').value,
+            torso_pitch_weight=self.get_parameter('torso_pitch_weight').value,
+            state_reg_weight=self.get_parameter('state_reg_weight').value,
+            ctrl_reg_weight=self.get_parameter('ctrl_reg_weight').value,
+            u_max=self.get_parameter('u_max').value,
+            body_v_limit=self.get_parameter('body_v_limit').value,
+            arm_v_limit=self.get_parameter('arm_v_limit').value,
+            dt=self.get_parameter('dt').value,
         )
+        self.ocp_solver = WbotOCP(
+            mjcf_path='/home/guanyu/crocoddyl/wbot/description/urdf/wbot_v2.xml',
+            config=ocp_config
+        )
+        self.control_joints = [
+            'right', 'left', 'ankle', 'knee', 'hip', 'waist_roll', 'waist_yaw'
+        ]
+        self.control_indices_q = []
+        for joint_name in self.control_joints:
+            idx_q, _ = self.ocp_solver.joint_indices.get(joint_name, (None, None))
+            if idx_q is None:
+                self.get_logger().warn(f'Control joint not found in model: {joint_name}')
+            self.control_indices_q.append(idx_q)
 
         # MPC state
         self.latest_state: Optional[WbotState] = None
@@ -198,8 +248,14 @@ class WbotMpcNode(Node):
 
             # Update warm-start for next iteration
             # Always update warm start (shift solution by one timestep)
-            xs = result['xs'].tolist() if isinstance(result['xs'], np.ndarray) else result['xs']
-            us = result['us'].tolist() if isinstance(result['us'], np.ndarray) else result['us']
+            if isinstance(result['xs'], np.ndarray):
+                xs = [x.copy() for x in result['xs']]
+            else:
+                xs = result['xs']
+            if isinstance(result['us'], np.ndarray):
+                us = [u.copy() for u in result['us']]
+            else:
+                us = result['us']
             self.xs_prev = xs[1:] + [xs[-1]]
             self.us_prev = us[1:] + [us[-1]]
 
@@ -226,7 +282,6 @@ class WbotMpcNode(Node):
                     f'iters={result["iter"]}'
                 )
                 self.last_solve_time = current_time
-
         except Exception as e:
             self.get_logger().error(f'MPC solve failed: {e}')
             # Publish zero control on failure
@@ -246,7 +301,46 @@ class WbotMpcNode(Node):
 
         # Extract first control from trajectory
         u_apply = result['us'][0]
-        control_msg.control = u_apply.tolist() if isinstance(u_apply, np.ndarray) else u_apply
+        if isinstance(u_apply, np.ndarray):
+            u_vec = u_apply
+        else:
+            u_vec = np.array(u_apply, dtype=float)
+
+        xs = result.get('xs', None)
+        if xs is not None and len(xs) > 1:
+            x_ref = xs[1]
+        elif xs is not None and len(xs) > 0:
+            x_ref = xs[0]
+        else:
+            x_ref = None
+
+        if x_ref is not None:
+            if isinstance(x_ref, np.ndarray):
+                x_ref_vec = x_ref
+            else:
+                x_ref_vec = np.array(x_ref, dtype=float)
+            nq = self.ocp_solver.state.nq
+            q_ref = x_ref_vec[:nq]
+            v_ref = x_ref_vec[nq:]
+            control = []
+            for joint_name, idx_q in zip(self.control_joints, self.control_indices_q):
+                if joint_name in ('left', 'right'):
+                    idx_v = self.ocp_solver.joint_indices.get(joint_name, (None, None))[1]
+                    if idx_v is None or idx_v >= len(v_ref):
+                        control.append(0.0)
+                    else:
+                        control.append(float(v_ref[idx_v]))
+                else:
+                    if idx_q is None or idx_q >= len(q_ref):
+                        control.append(0.0)
+                    else:
+                        control.append(float(q_ref[idx_q]))
+        else:
+            if len(u_vec) == len(self.control_indices_q):
+                control = u_vec.tolist()
+            else:
+                control = [0.0] * len(self.control_indices_q)
+        control_msg.control = control
         control_msg.valid = True  # If solve succeeded, control is valid
 
         # Time for which this control is valid (next timestep)
@@ -264,7 +358,7 @@ class WbotMpcNode(Node):
         control_msg = WbotControl()
         control_msg.header.stamp = timestamp
         control_msg.header.frame_id = 'wbot_base'
-        control_msg.control = [0.0] * self.ocp_solver.nu
+        control_msg.control = [0.0] * len(self.control_indices_q)
         control_msg.valid = False
         control_msg.time = 0.0
 

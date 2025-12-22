@@ -4,3 +4,6 @@ source;share/wbot_simulator/hook/pythonpath.sh
 source;share/wbot_simulator/hook/ament_prefix_path.ps1
 source;share/wbot_simulator/hook/ament_prefix_path.dsv
 source;share/wbot_simulator/hook/ament_prefix_path.sh
+source;../../build/wbot_simulator/share/wbot_simulator/hook/pythonpath_develop.ps1
+source;../../build/wbot_simulator/share/wbot_simulator/hook/pythonpath_develop.dsv
+source;../../build/wbot_simulator/share/wbot_simulator/hook/pythonpath_develop.sh

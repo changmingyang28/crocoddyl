@@ -1,0 +1,17 @@
+[0.475s] Invoking command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc': AMENT_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs LD_LIBRARY_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/build --no-deps symlink_data
+[0.586s] running develop
+[0.647s] running egg_info
+[0.647s] writing wbot_mpc.egg-info/PKG-INFO
+[0.647s] writing dependency_links to wbot_mpc.egg-info/dependency_links.txt
+[0.647s] writing entry points to wbot_mpc.egg-info/entry_points.txt
+[0.647s] writing requirements to wbot_mpc.egg-info/requires.txt
+[0.648s] writing top-level names to wbot_mpc.egg-info/top_level.txt
+[0.648s] reading manifest file 'wbot_mpc.egg-info/SOURCES.txt'
+[0.648s] writing manifest file 'wbot_mpc.egg-info/SOURCES.txt'
+[0.649s] running build_ext
+[0.649s] Creating /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages/wbot-mpc.egg-link (link to .)
+[0.649s] Installing mpc_node script to /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/wbot_mpc
+[0.650s] 
+[0.650s] Installed /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc
+[0.650s] running symlink_data
+[0.662s] Invoked command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc' returned '0': AMENT_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs LD_LIBRARY_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/build --no-deps symlink_data

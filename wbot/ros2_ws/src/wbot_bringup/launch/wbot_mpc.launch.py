@@ -14,6 +14,7 @@ Architecture follows OCS2 design pattern:
 """
 
 import os
+from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, LogInfo, SetEnvironmentVariable
 from launch.substitutions import LaunchConfiguration
@@ -33,18 +34,6 @@ def generate_launch_description():
         'sim_frequency',
         default_value='100.0',
         description='Simulation frequency in Hz'
-    )
-
-    horizon_arg = DeclareLaunchArgument(
-        'horizon_steps',
-        default_value='20',
-        description='MPC horizon length in steps'
-    )
-
-    dt_arg = DeclareLaunchArgument(
-        'dt',
-        default_value='0.05',
-        description='MPC timestep in seconds'
     )
 
     enable_viewer_arg = DeclareLaunchArgument(
@@ -69,17 +58,17 @@ def generate_launch_description():
     )
 
     # MPC Solver Node
+    mpc_config_path = os.path.join(
+        get_package_share_directory('wbot_mpc'),
+        'config',
+        'mpc_params.yaml'
+    )
     mpc_node = Node(
         package='wbot_mpc',
         executable='mpc_node',
         name='wbot_mpc',
         output='screen',
-        parameters=[{
-            'horizon_steps': LaunchConfiguration('horizon_steps'),
-            'dt': LaunchConfiguration('dt'),
-            'ddp_max_iters': 50,
-            'publish_performance': True,
-        }],
+        parameters=[mpc_config_path],
         emulate_tty=True,
     )
 
@@ -104,8 +93,7 @@ def generate_launch_description():
             'Nodes:\n',
             '  - wbot_mujoco: MuJoCo simulator (main loop @ ',
             LaunchConfiguration('sim_frequency'), ' Hz)\n',
-            '  - wbot_mpc: MPC solver (horizon=',
-            LaunchConfiguration('horizon_steps'), ' steps)\n',
+            '  - wbot_mpc: MPC solver (config file)\n',
             '  - wbot_velocity_command: Keyboard interface\n',
             '\n',
             'Topics:\n',
@@ -125,8 +113,6 @@ def generate_launch_description():
     return LaunchDescription([
         # Arguments
         sim_freq_arg,
-        horizon_arg,
-        dt_arg,
         enable_viewer_arg,
 
         # Info

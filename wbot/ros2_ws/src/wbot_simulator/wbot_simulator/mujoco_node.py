@@ -164,7 +164,7 @@ class WbotMujocoNode(Node):
             msg: Control message from MPC
         """
         if not msg.valid:
-            self.get_logger().warn('Received invalid control, ignoring')
+            self.get_logger().debug('Received invalid control, ignoring')
             return
 
         self.latest_control = msg
@@ -200,7 +200,7 @@ class WbotMujocoNode(Node):
 
         # Check if control is stale (timeout after 0.5 seconds)
         if time.time() - self.last_control_time > 0.5:
-            self.get_logger().warn('Control timeout, applying zero control')
+            self.get_logger().debug('Control timeout, applying zero control')
             self.data.ctrl[:] = 0.0
             return
 

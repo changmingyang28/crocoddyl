@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing wbot_simulator.egg-info/PKG-INFO
+writing dependency_links to wbot_simulator.egg-info/dependency_links.txt
+writing entry points to wbot_simulator.egg-info/entry_points.txt
+writing requirements to wbot_simulator.egg-info/requires.txt
+writing top-level names to wbot_simulator.egg-info/top_level.txt
+reading manifest file 'wbot_simulator.egg-info/SOURCES.txt'
+writing manifest file 'wbot_simulator.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/lib/python3.10/site-packages/wbot-simulator.egg-link (link to .)
+Installing mujoco_node script to /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/lib/wbot_simulator
+
+Installed /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator
+running symlink_data

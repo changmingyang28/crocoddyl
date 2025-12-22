@@ -4,3 +4,8 @@ wbot_msgs.egg-info/PKG-INFO
 wbot_msgs.egg-info/SOURCES.txt
 wbot_msgs.egg-info/dependency_links.txt
 wbot_msgs.egg-info/top_level.txt
+wbot_msgs/msg/__init__.py
+wbot_msgs/msg/_mpc_performance.py
+wbot_msgs/msg/_velocity_command.py
+wbot_msgs/msg/_wbot_control.py
+wbot_msgs/msg/_wbot_state.py

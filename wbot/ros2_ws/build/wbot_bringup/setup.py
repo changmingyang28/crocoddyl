@@ -1,0 +1,1 @@
+/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_bringup/setup.py

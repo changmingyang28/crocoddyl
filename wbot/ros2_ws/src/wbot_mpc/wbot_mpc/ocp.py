@@ -54,7 +54,7 @@ class ResidualDataRelativeXY(crocoddyl.ResidualDataAbstract):
 class WbotOCPConfig:
     """OCP 配置参数"""
 
-    def __init__(self):
+    def __init__(self, **overrides):
         # === 差速驱动参数 ===
         self.wheel_radius = 0.0935  # m
         self.wheel_base = 0.42      # m
@@ -91,6 +91,10 @@ class WbotOCPConfig:
 
         # === 时间参数 ===
         self.dt = 0.01  # s
+
+        for key, value in overrides.items():
+            if hasattr(self, key):
+                setattr(self, key, value)
 
 
 class WbotOCP:

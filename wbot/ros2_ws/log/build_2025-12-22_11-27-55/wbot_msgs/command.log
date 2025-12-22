@@ -1,0 +1,2 @@
+Invoking command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs': /usr/bin/cmake /home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_msgs -DCMAKE_INSTALL_PREFIX=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs
+Invoked command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs' returned '1': /usr/bin/cmake /home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_msgs -DCMAKE_INSTALL_PREFIX=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs
