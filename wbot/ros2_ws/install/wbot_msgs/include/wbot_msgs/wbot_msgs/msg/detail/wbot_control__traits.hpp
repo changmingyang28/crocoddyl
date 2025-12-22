@@ -1,0 +1,1 @@
+/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs/rosidl_generator_cpp/wbot_msgs/msg/detail/wbot_control__traits.hpp

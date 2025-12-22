@@ -1,0 +1,24 @@
+[0.257s] Invoking command in '/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_mpc': AMENT_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs LD_LIBRARY_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/wbot_mpc build --build-base /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/build install --record /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/install.log --single-version-externally-managed install_data
+[0.364s] running egg_info
+[0.364s] writing ../../build/wbot_mpc/wbot_mpc.egg-info/PKG-INFO
+[0.365s] writing dependency_links to ../../build/wbot_mpc/wbot_mpc.egg-info/dependency_links.txt
+[0.365s] writing entry points to ../../build/wbot_mpc/wbot_mpc.egg-info/entry_points.txt
+[0.365s] writing requirements to ../../build/wbot_mpc/wbot_mpc.egg-info/requires.txt
+[0.365s] writing top-level names to ../../build/wbot_mpc/wbot_mpc.egg-info/top_level.txt
+[0.365s] reading manifest file '../../build/wbot_mpc/wbot_mpc.egg-info/SOURCES.txt'
+[0.366s] writing manifest file '../../build/wbot_mpc/wbot_mpc.egg-info/SOURCES.txt'
+[0.366s] running build
+[0.366s] running build_py
+[0.366s] copying wbot_mpc/mpc_node.py -> /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/build/lib/wbot_mpc
+[0.366s] running install
+[0.366s] running install_lib
+[0.367s] copying /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/build/lib/wbot_mpc/mpc_node.py -> /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages/wbot_mpc
+[0.367s] byte-compiling /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages/wbot_mpc/mpc_node.py to mpc_node.cpython-310.pyc
+[0.368s] running install_data
+[0.368s] running install_egg_info
+[0.369s] removing '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages/wbot_mpc-0.0.0-py3.10.egg-info' (and everything under it)
+[0.369s] Copying ../../build/wbot_mpc/wbot_mpc.egg-info to /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages/wbot_mpc-0.0.0-py3.10.egg-info
+[0.369s] running install_scripts
+[0.378s] Installing mpc_node script to /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/wbot_mpc
+[0.378s] writing list of installed files to '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/install.log'
+[0.388s] Invoked command in '/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_mpc' returned '0': AMENT_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs LD_LIBRARY_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/wbot_mpc build --build-base /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/build install --record /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/install.log --single-version-externally-managed install_data

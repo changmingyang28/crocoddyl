@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from wbot_msgs/msg/WbotControl.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module wbot_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "Wbot control input message" "\n"
+      "Contains control vector computed by MPC")
+    struct WbotControl {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Time for which this control is valid")
+      double time;
+
+      @verbatim (language="comment", text=
+        "Control vector [wheel_left_vel, wheel_right_vel, arm_joint_torques...]")
+      sequence<double> control;
+
+      @verbatim (language="comment", text=
+        "Flag indicating if this is a valid control (solver converged)")
+      boolean valid;
+    };
+  };
+};

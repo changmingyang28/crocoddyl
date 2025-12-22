@@ -1,0 +1,13 @@
+package.xml
+setup.cfg
+setup.py
+resource/wbot_command
+wbot_command/__init__.py
+wbot_command/velocity_command_node.py
+wbot_command.egg-info/PKG-INFO
+wbot_command.egg-info/SOURCES.txt
+wbot_command.egg-info/dependency_links.txt
+wbot_command.egg-info/entry_points.txt
+wbot_command.egg-info/requires.txt
+wbot_command.egg-info/top_level.txt
+wbot_command.egg-info/zip-safe

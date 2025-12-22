@@ -13,6 +13,51 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 MJCF_PATH = os.path.join(SCRIPT_DIR, "description/urdf/wbot_v2.xml")
 
 
+class ResidualModelRelativeXY(crocoddyl.ResidualModelAbstract):
+    """Torso XY relative to base (world-aligned)."""
+
+    def __init__(self, state, torso_frame_id, base_frame_id, nu=None):
+        super().__init__(state, 2, nu)
+        self.torso_frame_id = torso_frame_id
+        self.base_frame_id = base_frame_id
+        # ankle joint placement in Base_link frame (from MJCF: lower leg-u pos)
+        self.ankle_offset = np.array([-0.25, 0.0, 0.0])
+
+    def calc(self, data, x, u=None):
+        # Expect pinocchio data already updated by the dynamics model.
+        torso_pos = data.pinocchio.oMf[self.torso_frame_id].translation
+        base_placement = data.pinocchio.oMf[self.base_frame_id]
+        ankle_world = base_placement.translation + base_placement.rotation @ self.ankle_offset
+        data.r[:] = torso_pos[:2] - ankle_world[:2]
+
+    def calcDiff(self, data, x, u=None):
+        # Jacobian of translation w.r.t. configuration: use frame jacobians (LOCAL_WORLD_ALIGNED).
+        J_torso = pin.getFrameJacobian(
+            self.state.pinocchio, data.pinocchio, self.torso_frame_id, pin.LOCAL_WORLD_ALIGNED
+        )[:2, :]
+        J_base_full = pin.getFrameJacobian(
+            self.state.pinocchio, data.pinocchio, self.base_frame_id, pin.LOCAL_WORLD_ALIGNED
+        )
+        # Translate Jacobian to ankle point on base (v + w x p)
+        ankle_world = data.pinocchio.oMf[self.base_frame_id].rotation @ self.ankle_offset
+        J_base_translated = J_base_full[:3, :] - pin.skew(ankle_world) @ J_base_full[3:, :]
+        J_base = J_base_translated[:2, :]
+
+        data.Rx.fill(0.0)
+        data.Rx[:, :self.state.nv] = J_torso - J_base  # dq part
+        # dv part remains zero; Ru already zero.
+
+    def createData(self, data):
+        return ResidualDataRelativeXY(self, data)
+
+
+class ResidualDataRelativeXY(crocoddyl.ResidualDataAbstract):
+    def __init__(self, model, data):
+        super().__init__(model, data)
+        # Keep a handle to pinocchio data from the action data collector.
+        self.pinocchio = data.pinocchio
+
+
 def main():
     print("=" * 70)
     print("Wbot Contact Frames Test".center(70))
@@ -26,7 +71,7 @@ def main():
     def get_joint_indices(jname):
         """返回 (q_idx, v_idx)，若不存在则 (None, None)"""
         if not model.existJointName(jname):
-            return None, None
+            return None, None   
         jid = model.getJointId(jname)
         j = model.joints[jid]
         return j.idx_q, j.idx_v
@@ -80,7 +125,7 @@ def main():
         contact_positions[name] = pos + np.array([0.0, 0.0, -caster_radius])
 
     # base 需要抬升的高度（保证所有接触点落在地面 z=0）
-    base_height = max(-cp[2] for cp in contact_positions.values())
+    base_height = 0.0935 #max(-cp[2] for cp in contact_positions.values())
 
     # 获取base_link frame (MuJoCo XML 使用 Base_link)
     base_frame_id = model.getFrameId('Base_link')
@@ -172,15 +217,15 @@ def main():
     print(f"  - 控制输入维度 nu: {nu} (nv={model.nv}, 不包括基座的6个自由度)")
     print(f"  - 基座运动: 被动响应轮子驱动")
 
-    # 目标关节角度
+    # 目标关节角度（只设置 knee，ankle 和 hip 通过躯干高度约束隐式确定）
     target_joint_angles = {
-        # 下肢 - 设置指定角度（直立姿态）
-        'ankle': -0.562,
-        'knee': -1.2,
-        'hip': -0.646,
+        # 下肢 - 只设置 knee 角度
+        # 'ankle': -0.562,    # 移除：通过躯干高度约束隐式确定
+        'knee':  -1.2,        # 保留：膝盖弯曲角度
+        # 'hip':   -0.646,    # 移除：通过躯干高度约束隐式确定
         # 腰部 - 固定为0
         'waist_roll': 0.0,
-        'waist_yaw': 0.0,  # 修正：改为0.0
+        'waist_yaw': 0.0,
         # 手臂 - 完全固定为0
         'right_arm_pitch': 0.0,
         'left_arm_pitch': 0.0,
@@ -226,7 +271,7 @@ def main():
     # 差速驱动参数设置
     # ============================================================
     # 机器人几何参数
-    wheel_radius = 0.095  # 轮子半径 (m)
+    wheel_radius = 0.0935  # 轮子半径 (m)
     wheel_base = 0.42     # 轮间距 (m) - 两个主动轮中心之间的距离
 
 
@@ -260,10 +305,6 @@ def main():
         else:
             print(f"  ✗ {joint_name}: 关节不存在！")
 
-    # 设置目标速度（在x中速度从nq开始）
-    x_ref[state.nq + 0] = target_vx     # base前进速度 vx (nv索引0)
-    x_ref[state.nq + 5] = target_omega_z  # base转向角速度 ωz (nv索引5)
-
     # 设置左右轮目标角速度（根据 left / right 的 v_idx）
     left_wheel_v_idx = joint_indices['left'][1]
     right_wheel_v_idx = joint_indices['right'][1]
@@ -271,6 +312,49 @@ def main():
         x_ref[state.nq + left_wheel_v_idx] = target_wheel_vel_left
     if right_wheel_v_idx is not None:
         x_ref[state.nq + right_wheel_v_idx] = target_wheel_vel_right
+
+    # ====================================================================
+    # ⭐ 统一权重配置区域
+    # ====================================================================
+
+    # 关节分组
+    # 注意：ankle 和 hip 不再有位置目标，通过躯干高度约束隐式确定
+    body_joints_with_targets = ['knee', 'waist_roll', 'waist_yaw']  # 有明确角度目标的关节
+    body_joints_free = ['ankle', 'hip']  # 自由优化的关节（无位置目标）
+    body_joints_all = body_joints_with_targets + body_joints_free  # 所有躯体关节（用于速度约束）
+    arm_joints = ['right_arm_pitch', 'left_arm_pitch']
+
+    # --- 位置权重（关节角度跟踪）---
+    body_pos_weight = 500.0         # 躯体关节（knee/waist）位置跟踪权重
+    free_joint_pos_weight = 0.0     # 自由关节（ankle/hip）不跟踪位置
+    arm_pos_weight = 1000.0         # 手臂关节（完全固定）
+
+    # --- 速度权重（软约束）---
+    body_vel_weight = 300.0         # 躯体关节速度权重
+    arm_vel_weight = 5000.0         # 手臂速度权重（极高，完全固定）
+    wheel_vel_weight = 100.0        # 轮子速度权重
+
+    # --- 速度硬限制（BoxFDDP约束）---
+    body_v_limit = 1.0              # 躯体关节速度限制 (rad/s)
+    arm_v_limit = 1.0               # 手臂速度限制 (rad/s)
+
+    # --- 躯干位置约束（Body Relative Constraint）---
+    # 约束躯干 XY 位置保持在 base 正上方，Z 轴自由允许下蹲
+    torso_xy_weight = 100.0        # 躯干 XY 位置跟踪权重（保持在 base 上方）
+    torso_pitch_weight = 500.0      # 躯干 pitch 抑制（绕Y轴旋转），roll/yaw 不限制
+
+    # --- 代价函数权重 ---
+    stateReg_weight = 3e-1          # 状态跟踪权重
+    ctrl_reg_weight = 1e-1          # 控制正则化权重（限制力矩）
+
+    # --- 力矩限制（BoxFDDP约束）---
+    u_max = 60.0                    # 最大力矩 (Nm)
+
+    # --- 优化时域参数 ---
+    DT = 0.01                       # 时间步长 (s)
+    T_HORIZON = 500                 # 时域步数
+
+    # ====================================================================
 
     # 权重设置（tangent space维度 = state.ndx = 2*nv）
     # 位置tangent [0:nv]: base(6) + joints
@@ -280,27 +364,28 @@ def main():
 
     # 位置tangent部分 [0:nv]
     stateWeights[0:3] = [0.0, 0.0, 0.0]  # base xyz：Z高度约束
-    stateWeights[3:6] = [200.0, 300.0, 200.0]  # base姿态：加大约束，防止后仰/侧翻
+    stateWeights[3:6] = [0.0, 0.0, 0.0]  # base姿态：加大约束，防止后仰/侧翻
 
     # 为目标关节设置高权重（按组分类）
-    leg_joints = ['ankle', 'knee', 'hip']
-    waist_joints = ['waist_roll', 'waist_yaw']
-    arm_joints = ['right_arm_pitch', 'left_arm_pitch']
-
     for joint_name in target_joint_angles.keys():
         if model.existJointName(joint_name):
             joint_id = model.getJointId(joint_name)
             joint_v_idx = model.joints[joint_id].idx_v  # tangent space 用 v 索引
 
             # 根据关节组设置不同的位置权重
-            if joint_name in leg_joints:
-                stateWeights[joint_v_idx] = 5000.0  # 腿部关节：高权重保持直立姿态
-            elif joint_name in waist_joints:
-                stateWeights[joint_v_idx] = 10000.0  # 腰部关节：极高权重（完全固定）
+            if joint_name in body_joints_with_targets:
+                stateWeights[joint_v_idx] = body_pos_weight
             elif joint_name in arm_joints:
-                stateWeights[joint_v_idx] = 100000.0  # 手臂关节：超高权重（完全固定为0）
+                stateWeights[joint_v_idx] = arm_pos_weight
             else:
                 stateWeights[joint_v_idx] = 1000.0  # 其他关节：默认权重
+
+    # 为自由关节设置低权重（ankle 和 hip 不跟踪位置，通过躯干高度约束确定）
+    for joint_name in body_joints_free:
+        if model.existJointName(joint_name):
+            joint_id = model.getJointId(joint_name)
+            joint_v_idx = model.joints[joint_id].idx_v
+            stateWeights[joint_v_idx] = free_joint_pos_weight  # 0.0，不跟踪位置
 
     # 轮子角度自由（允许滚动）
     if left_wheel_v_idx is not None:
@@ -308,61 +393,19 @@ def main():
     if right_wheel_v_idx is not None:
         stateWeights[right_wheel_v_idx] = 0.0
 
-    # ============================================================
-    # 速度权重设置（状态向量索引从29开始，对应nq后的速度部分）
-    # ============================================================
+    # --- 躯体关节速度权重（包括所有躯体关节）---
+    for body_joint in body_joints_all:
+        if model.existJointName(body_joint):
+            body_v_idx = model.joints[model.getJointId(body_joint)].idx_v
+            stateWeights[vel_offset + body_v_idx] = body_vel_weight
 
-    # --- Base 速度权重 ---
-    stateWeights[vel_offset + 0:vel_offset + 3] = [3000.0, 1000.0, 10.0]  # base线速度 [vx, vy, vz]
-                                                                            # vx: 前进速度（高权重优先）
-                                                                            # vy: 侧向滑动（中等权重防侧滑）
-                                                                            # vz: 垂直速度（低权重）
-    stateWeights[vel_offset + 3:vel_offset + 6] = [10.0, 10.0, 3000.0]    # base角速度 [wx, wy, wz]
-                                                                            # wx, wy: 俯仰/侧滚（低权重）
-                                                                            # wz: 转向角速度（高权重，防止意外转向）
-
-    # --- 腿部关节速度权重（按惯量分组调参）---
-    # ankle (v_idx=7): 脚踝关节
-    ankle_vel_weight = 1000.0
-    if model.existJointName('ankle'):
-        ankle_v_idx = model.joints[model.getJointId('ankle')].idx_v
-        stateWeights[vel_offset + ankle_v_idx] = ankle_vel_weight
-
-    # knee (v_idx=8): 膝关节
-    knee_vel_weight = 1000.0
-    if model.existJointName('knee'):
-        knee_v_idx = model.joints[model.getJointId('knee')].idx_v
-        stateWeights[vel_offset + knee_v_idx] = knee_vel_weight
-
-    # hip (v_idx=9): 髋关节
-    hip_vel_weight = 1000.0
-    if model.existJointName('hip'):
-        hip_v_idx = model.joints[model.getJointId('hip')].idx_v
-        stateWeights[vel_offset + hip_v_idx] = hip_vel_weight
-
-    # --- 腰部关节速度权重 ---
-    # waistyaw (v_idx=10): 腰部侧倾
-    waistyaw_vel_weight = 1500.0
-    if model.existJointName('waist_yaw'):
-        waistyaw_v_idx = model.joints[model.getJointId('waist_yaw')].idx_v
-        stateWeights[vel_offset + waistyaw_v_idx] = waistyaw_vel_weight
-
-    # waistroll (v_idx): 腰部扭转
-    waistroll_vel_weight = 1500.0
-    if model.existJointName('waist_roll'):
-        waistroll_v_idx = model.joints[model.getJointId('waist_roll')].idx_v
-        stateWeights[vel_offset + waistroll_v_idx] = waistroll_vel_weight
-
-    # --- 手臂关节速度权重（如果有）---
-    arm_vel_weight = 100000.0  # 极高权重，完全固定手臂不动
-    for arm_joint in ['right_arm_pitch', 'left_arm_pitch']:
+    # --- 手臂关节速度权重 ---
+    for arm_joint in arm_joints:
         if model.existJointName(arm_joint):
             arm_v_idx = model.joints[model.getJointId(arm_joint)].idx_v
             stateWeights[vel_offset + arm_v_idx] = arm_vel_weight
 
-    # --- 轮子速度权重（v_idx=25,26）---
-    # 轮子速度需要较强约束，但不是硬限制（允许自由滚动）
-    wheel_vel_weight = 1000.0
+    # --- 轮子速度权重 ---
     if left_wheel_v_idx is not None:
         stateWeights[vel_offset + left_wheel_v_idx] = wheel_vel_weight
     if right_wheel_v_idx is not None:
@@ -379,7 +422,56 @@ def main():
     stateResidual = crocoddyl.ResidualModelState(state, x_ref, nu)
     stateActivation = crocoddyl.ActivationModelWeightedQuad(stateWeights**2)
     stateReg = crocoddyl.CostModelResidual(state, stateActivation, stateResidual)
-    costModel.addCost("stateReg", stateReg, 1e-1)
+    costModel.addCost("stateReg", stateReg, stateReg_weight)
+
+    # ============================================================
+    # 躯干位置约束（Body Relative Constraint）
+    # ============================================================
+    # 约束 waist yaw 链接相对于 base 的 XY 位置（保持在 base 正上方）
+    # Z 轴自由，允许下蹲（通过 knee 角度控制）
+
+    torso_frame_name = 'waist yaw-u'  # 躯干链接名称
+    if model.existFrame(torso_frame_name):
+        torso_frame_id = model.getFrameId(torso_frame_name)
+
+        # 相对 XY 残差：torso_xy - ankle_xy（ankle 相对 Base_link 有固定偏移）
+        torso_xy_residual = ResidualModelRelativeXY(
+            state, torso_frame_id, base_frame_id, nu
+        )
+
+        # 只约束 XY，Z 自由
+        torso_translation_weights = np.array([torso_xy_weight, torso_xy_weight])
+        torsoTranslationActivation = crocoddyl.ActivationModelWeightedQuad(torso_translation_weights**2)
+
+        torsoTranslationCost = crocoddyl.CostModelResidual(
+            state, torsoTranslationActivation, torso_xy_residual
+        )
+        costModel.addCost("torsoXY", torsoTranslationCost, 1.0)
+
+        print(f"\n躯干位置约束 (Body Relative):")
+        print(f"  - Frame: {torso_frame_name} (id={torso_frame_id})")
+        print(f"  - XY约束: 相对于 ankle 位置（Base_link 偏移 [-0.2, -0.0453, 0.0275]），保持对齐（权重={torso_xy_weight}）")
+        print(f"  - Z轴: 自由（允许下蹲，通过 knee 角度控制）")
+    else:
+        print(f"\n⚠️  警告: 未找到躯干frame '{torso_frame_name}'")
+
+    # ============================================================
+    # 躯干姿态约束：抑制绕Y轴的旋转（pitch），roll/yaw 自由
+    # ============================================================
+    if model.existFrame(torso_frame_name):
+        # 目标姿态：世界系对齐（即 pitch=0）。只在激活里给 pitch 轴权重。
+        torso_orientation_residual = crocoddyl.ResidualModelFrameRotation(
+            state, torso_frame_id, pin.SE3.Identity().rotation, nu
+        )
+        # 小角度下，ResidualFrameOrientation 的向量元素对应 x,y,z 轴的旋转分量
+        orientation_weights = np.array([0.0, torso_pitch_weight, 0.0])
+        torsoOrientationActivation = crocoddyl.ActivationModelWeightedQuad(orientation_weights**2)
+        torsoOrientationCost = crocoddyl.CostModelResidual(
+            state, torsoOrientationActivation, torso_orientation_residual
+        )
+        costModel.addCost("torsoPitch", torsoOrientationCost, 1.0)
+        print(f"\n躯干姿态约束:")
+        print(f"  - 抑制 pitch (绕Y轴) 旋转，权重={torso_pitch_weight}；roll/yaw 自由")
 
     # Friction cones - 移除（Contact1D不支持）
     # Contact1D只约束Z方向，不需要friction cone约束
@@ -387,26 +479,19 @@ def main():
     # Control regularization - 增加权重以限制大力矩（间接限制加速度）
     ctrlResidual = crocoddyl.ResidualModelControl(state, nu)
     ctrlReg = crocoddyl.CostModelResidual(state, ctrlResidual)
-    costModel.addCost("ctrlReg", ctrlReg, 1e-2)  # 从1e-3提高到1
-
-    # 添加关节加速度惩罚（通过惩罚力矩变化率）
-    # 注意：crocoddyl没有直接的加速度cost，但可以通过控制变化率间接实现
-    # 这里我们增大控制正则化来限制力矩，从而限制加速度
+    costModel.addCost("ctrlReg", ctrlReg, ctrl_reg_weight)
 
     # Differential action model
     dmodel = crocoddyl.DifferentialActionModelContactFwdDynamics(
         state, actuation, contactModel, costModel, 0.0, True
     )
 
-    # Add control (torque) bounds: -200 to +200 Nm
-    u_max = 100.0  # Maximum torque in Nm
+    # Add control (torque) bounds
     dmodel.u_lb = np.full(nu, -u_max)
     dmodel.u_ub = np.full(nu, u_max)
     print(f"\n力矩限制: ±{u_max} Nm")
 
     # Integrated action model
-    DT = 0.01
-    T_HORIZON = 300  # 5秒静止
     model_running = crocoddyl.IntegratedActionModelEuler(dmodel, DT)
     model_terminal = crocoddyl.IntegratedActionModelEuler(dmodel, 0.0)
 
@@ -419,46 +504,15 @@ def main():
     x_lb = np.full(state.nx, -np.inf)
     x_ub = np.full(state.nx, np.inf)
 
-    # --- 腿部关节速度硬限制（按惯量分组调参）---
-    # ankle (v_idx=7): 脚踝关节
-    ankle_v_limit = 2.0  # rad/s
-    if model.existJointName('ankle'):
-        ankle_v_idx = model.joints[model.getJointId('ankle')].idx_v
-        x_lb[state.nq + ankle_v_idx] = -ankle_v_limit
-        x_ub[state.nq + ankle_v_idx] = ankle_v_limit
+    # --- 躯体关节速度硬限制（包括所有躯体关节）---
+    for body_joint in body_joints_all:
+        if model.existJointName(body_joint):
+            body_v_idx = model.joints[model.getJointId(body_joint)].idx_v
+            x_lb[state.nq + body_v_idx] = -body_v_limit
+            x_ub[state.nq + body_v_idx] = body_v_limit
 
-    # knee (v_idx=8): 膝关节
-    knee_v_limit = 2.0  # rad/s
-    if model.existJointName('knee'):
-        knee_v_idx = model.joints[model.getJointId('knee')].idx_v
-        x_lb[state.nq + knee_v_idx] = -knee_v_limit
-        x_ub[state.nq + knee_v_idx] = knee_v_limit
-
-    # hip (v_idx=9): 髋关节
-    hip_v_limit = 2.0  # rad/s
-    if model.existJointName('hip'):
-        hip_v_idx = model.joints[model.getJointId('hip')].idx_v
-        x_lb[state.nq + hip_v_idx] = -hip_v_limit
-        x_ub[state.nq + hip_v_idx] = hip_v_limit
-
-    # --- 腰部关节速度硬限制 ---
-    # waistyaw (v_idx=10): 腰部侧倾
-    waistyaw_v_limit = 2.0  # rad/s
-    if model.existJointName('waist_yaw'):
-        waistyaw_v_idx = model.joints[model.getJointId('waist_yaw')].idx_v
-        x_lb[state.nq + waistyaw_v_idx] = -waistyaw_v_limit
-        x_ub[state.nq + waistyaw_v_idx] = waistyaw_v_limit
-
-    # waistroll (v_idx=11): 腰部扭转
-    waistroll_v_limit = 2.0  # rad/s
-    if model.existJointName('waist_roll'):
-        waistroll_v_idx = model.joints[model.getJointId('waist_roll')].idx_v
-        x_lb[state.nq + waistroll_v_idx] = -waistroll_v_limit
-        x_ub[state.nq + waistroll_v_idx] = waistroll_v_limit
-
-    # --- 手臂关节速度硬限制（如果有）---
-    arm_v_limit = 0.001  # rad/s - 几乎为0，完全固定手臂
-    for arm_joint in ['right_arm_pitch', 'left_arm_pitch']:
+    # --- 手臂关节速度硬限制 ---
+    for arm_joint in arm_joints:
         if model.existJointName(arm_joint):
             arm_v_idx = model.joints[model.getJointId(arm_joint)].idx_v
             x_lb[state.nq + arm_v_idx] = -arm_v_limit
@@ -474,24 +528,16 @@ def main():
 
     # 打印速度限制摘要
     print(f"\n关节速度硬限制:")
-    print(f"  - 腿部关节 (ankle/knee/hip): ±{ankle_v_limit} rad/s")
-    print(f"  - 腰部关节 (waistyaw/roll): ±{waistyaw_v_limit} rad/s")
+    print(f"  - 躯体关节 (ankle/knee/hip/waist): ±{body_v_limit} rad/s")
     print(f"  - 手臂关节: ±{arm_v_limit} rad/s")
     print(f"  - 轮子 (jt-left/right wheel): 无限制 (自由滚动)")
 
     # 创建关节速度限制字典（用于初始化轨迹猜测）
     joint_velocity_limits = {}
-    if model.existJointName('ankle'):
-        joint_velocity_limits['ankle'] = ankle_v_limit
-    if model.existJointName('knee'):
-        joint_velocity_limits['knee'] = knee_v_limit
-    if model.existJointName('hip'):
-        joint_velocity_limits['hip'] = hip_v_limit
-    if model.existJointName('waist_yaw'):
-        joint_velocity_limits['waist_yaw'] = waistyaw_v_limit
-    if model.existJointName('waist_roll'):
-        joint_velocity_limits['waist_roll'] = waistroll_v_limit
-    for arm_joint in ['right_arm_pitch', 'left_arm_pitch']:
+    for body_joint in body_joints_all:
+        if model.existJointName(body_joint):
+            joint_velocity_limits[body_joint] = body_v_limit
+    for arm_joint in arm_joints:
         if model.existJointName(arm_joint):
             joint_velocity_limits[arm_joint] = arm_v_limit
 

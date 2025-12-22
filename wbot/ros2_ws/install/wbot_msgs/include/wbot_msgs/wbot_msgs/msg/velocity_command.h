@@ -1,0 +1,1 @@
+/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs/rosidl_generator_c/wbot_msgs/msg/velocity_command.h

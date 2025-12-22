@@ -1,0 +1,9 @@
+source;share/wbot_command/hook/pythonpath.ps1
+source;share/wbot_command/hook/pythonpath.dsv
+source;share/wbot_command/hook/pythonpath.sh
+source;share/wbot_command/hook/ament_prefix_path.ps1
+source;share/wbot_command/hook/ament_prefix_path.dsv
+source;share/wbot_command/hook/ament_prefix_path.sh
+source;../../build/wbot_command/share/wbot_command/hook/pythonpath_develop.ps1
+source;../../build/wbot_command/share/wbot_command/hook/pythonpath_develop.dsv
+source;../../build/wbot_command/share/wbot_command/hook/pythonpath_develop.sh

@@ -210,12 +210,12 @@ def plot_joint_data(log_file: str, output_file: str = None):
     # 读取CSV数据
     data = np.genfromtxt(log_file, delimiter=',', names=True, encoding='utf-8')
 
-    # 关节列表
-    joints = ['ankle', 'knee', 'hip', 'waistroll']
+    # 只分析 ankle 关节
+    joint = 'ankle'
 
-    # Create 4x4 subplot grid (4 joints × 4 data types)
-    fig, axes = plt.subplots(4, 4, figsize=(20, 16))
-    fig.suptitle('Joint Motion Data Analysis', fontsize=16, fontweight='bold')
+    # Create 1x4 subplot grid (1 joint × 4 data types)
+    fig, axes = plt.subplots(1, 4, figsize=(20, 4))
+    fig.suptitle('Ankle Joint Motion Data Analysis', fontsize=16, fontweight='bold')
 
     data_types = [
         ('pos(deg)', 'Angle (deg)', 'b-'),
@@ -226,44 +226,35 @@ def plot_joint_data(log_file: str, output_file: str = None):
 
     time = data['times']
 
-    for i, joint in enumerate(joints):
-        for j, (suffix, ylabel, color) in enumerate(data_types):
-            ax = axes[i, j]
+    for j, (suffix, ylabel, color) in enumerate(data_types):
+        ax = axes[j]
 
-            # Construct column name (numpy.genfromtxt removes special chars)
-            # 'pos(deg)' -> 'posdeg', 'vel(rad/s)' -> 'velrads', etc.
-            suffix_clean = suffix.replace('(', '').replace(')', '').replace('/', '')
-            col_name = f'{joint}_{suffix_clean}'
+        # Construct column name (numpy.genfromtxt removes special chars)
+        # 'pos(deg)' -> 'posdeg', 'vel(rad/s)' -> 'velrads', etc.
+        suffix_clean = suffix.replace('(', '').replace(')', '').replace('/', '')
+        col_name = f'{joint}_{suffix_clean}'
 
-            try:
-                values = data[col_name]
-                ax.plot(time, values, color, linewidth=1.5, label=joint)
-                ax.set_ylabel(ylabel, fontsize=10)
-                ax.grid(True, alpha=0.3)
-                ax.axhline(y=0, color='k', linestyle='--', alpha=0.3, linewidth=0.5)
+        try:
+            values = data[col_name]
+            ax.plot(time, values, color, linewidth=2.0, label=joint)
+            ax.set_ylabel(ylabel, fontsize=12, fontweight='bold')
+            ax.set_xlabel('Time (s)', fontsize=11)
+            ax.grid(True, alpha=0.3)
+            ax.axhline(y=0, color='k', linestyle='--', alpha=0.3, linewidth=0.8)
 
-                # Add title for first row
-                if i == 0:
-                    title_map = {
-                        'pos(deg)': 'Position',
-                        'vel(rad/s)': 'Velocity',
-                        'acc(rad/s²)': 'Acceleration',
-                        'torque(Nm)': 'Torque'
-                    }
-                    ax.set_title(title_map[suffix], fontsize=12, fontweight='bold')
+            # Add title
+            title_map = {
+                'pos(deg)': 'Position',
+                'vel(rad/s)': 'Velocity',
+                'acc(rad/s²)': 'Acceleration',
+                'torque(Nm)': 'Torque'
+            }
+            ax.set_title(f'Ankle {title_map[suffix]}', fontsize=13, fontweight='bold')
 
-                # 最左列添加关节名称
-                if j == 0:
-                    ax.set_ylabel(f'{joint.upper()}\n{ylabel}', fontsize=10, fontweight='bold')
-
-                # Add x-axis label for last row
-                if i == len(joints) - 1:
-                    ax.set_xlabel('Time (s)', fontsize=10)
-
-            except (KeyError, ValueError) as e:
-                ax.text(0.5, 0.5, f'Data unavailable\n{col_name}',
-                       ha='center', va='center', transform=ax.transAxes)
-                ax.set_ylabel(ylabel, fontsize=10)
+        except (KeyError, ValueError) as e:
+            ax.text(0.5, 0.5, f'Data unavailable\n{col_name}',
+                   ha='center', va='center', transform=ax.transAxes)
+            ax.set_ylabel(ylabel, fontsize=12)
 
     plt.tight_layout()
     plt.savefig(output_file, dpi=150, bbox_inches='tight')

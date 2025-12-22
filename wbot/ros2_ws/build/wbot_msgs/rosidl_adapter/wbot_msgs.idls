@@ -1,0 +1,4 @@
+/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs/rosidl_adapter/wbot_msgs:msg/WbotState.idl
+/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs/rosidl_adapter/wbot_msgs:msg/WbotControl.idl
+/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs/rosidl_adapter/wbot_msgs:msg/VelocityCommand.idl
+/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs/rosidl_adapter/wbot_msgs:msg/MpcPerformance.idl

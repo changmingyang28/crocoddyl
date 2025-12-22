@@ -1,0 +1,282 @@
+[0.004s] Invoking command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs
+[0.038s] -- The C compiler identification is GNU 11.4.0
+[0.100s] -- The CXX compiler identification is GNU 11.4.0
+[0.104s] -- Detecting C compiler ABI info
+[0.181s] -- Detecting C compiler ABI info - done
+[0.187s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.187s] -- Detecting C compile features
+[0.187s] -- Detecting C compile features - done
+[0.189s] -- Detecting CXX compiler ABI info
+[0.277s] -- Detecting CXX compiler ABI info - done
+[0.281s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.281s] -- Detecting CXX compile features
+[0.282s] -- Detecting CXX compile features - done
+[0.283s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.379s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.425s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.434s] -- Found std_msgs: 4.9.0 (/opt/ros/humble/share/std_msgs/cmake)
+[0.447s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.449s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.452s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.457s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.464s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.475s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.635s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.916s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.017s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.033s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.033s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.054s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.055s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.055s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.055s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.084s] -- Found PythonExtra: .so  
+[1.107s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.115s] -- Added test 'lint_cmake' to check CMake code style
+[1.115s] -- Added test 'xmllint' to check XML markup files
+[1.116s] -- Configuring done
+[1.131s] -- Generating done
+[1.135s] -- Build files have been written to: /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs
+[1.138s] Invoked command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs
+[1.139s] Invoking command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs -- -j28 -l28
+[1.169s] [  1%] Generating C code for ROS interfaces
+[1.179s] [  3%] Generating C++ code for ROS interfaces
+[1.184s] [  3%] Built target ament_cmake_python_symlink_wbot_msgs
+[1.286s] running egg_info
+[1.286s] creating wbot_msgs.egg-info
+[1.286s] writing wbot_msgs.egg-info/PKG-INFO
+[1.287s] writing dependency_links to wbot_msgs.egg-info/dependency_links.txt
+[1.287s] writing top-level names to wbot_msgs.egg-info/top_level.txt
+[1.287s] writing manifest file 'wbot_msgs.egg-info/SOURCES.txt'
+[1.287s] reading manifest file 'wbot_msgs.egg-info/SOURCES.txt'
+[1.288s] writing manifest file 'wbot_msgs.egg-info/SOURCES.txt'
+[1.301s] [  3%] Built target ament_cmake_python_build_wbot_msgs_egg
+[1.417s] [  3%] Built target wbot_msgs__cpp
+[1.418s] [  5%] Building C object CMakeFiles/wbot_msgs__rosidl_generator_c.dir/rosidl_generator_c/wbot_msgs/msg/detail/velocity_command__functions.c.o
+[1.419s] [  7%] Building C object CMakeFiles/wbot_msgs__rosidl_generator_c.dir/rosidl_generator_c/wbot_msgs/msg/detail/wbot_state__functions.c.o
+[1.419s] [  9%] Building C object CMakeFiles/wbot_msgs__rosidl_generator_c.dir/rosidl_generator_c/wbot_msgs/msg/detail/wbot_control__functions.c.o
+[1.419s] [ 10%] Building C object CMakeFiles/wbot_msgs__rosidl_generator_c.dir/rosidl_generator_c/wbot_msgs/msg/detail/mpc_performance__functions.c.o
+[1.422s] [ 12%] Generating C++ type support for eProsima Fast-RTPS
+[1.423s] [ 14%] Generating C++ type support dispatch for ROS interfaces
+[1.424s] [ 16%] Generating C++ introspection for ROS interfaces
+[1.445s] [ 18%] Linking C shared library libwbot_msgs__rosidl_generator_c.so
+[1.464s] [ 18%] Built target wbot_msgs__rosidl_generator_c
+[1.471s] [ 20%] Generating C type support for eProsima Fast-RTPS
+[1.471s] [ 23%] Generating C type support dispatch for ROS interfaces
+[1.471s] [ 23%] Generating C introspection for ROS interfaces
+[1.619s] [ 27%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/wbot_msgs/msg/wbot_control__type_support.cpp.o
+[1.619s] [ 27%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/wbot_msgs/msg/wbot_state__type_support.cpp.o
+[1.619s] [ 29%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/wbot_msgs/msg/velocity_command__type_support.cpp.o
+[1.619s] [ 30%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/wbot_msgs/msg/mpc_performance__type_support.cpp.o
+[1.631s] [ 32%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wbot_msgs/msg/detail/wbot_state__type_support.cpp.o
+[1.631s] [ 34%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wbot_msgs/msg/detail/wbot_control__type_support.cpp.o
+[1.633s] [ 36%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wbot_msgs/msg/detail/velocity_command__type_support.cpp.o
+[1.633s] [ 38%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/wbot_msgs/msg/detail/mpc_performance__type_support.cpp.o
+[1.648s] [ 40%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/wbot_msgs/msg/detail/dds_fastrtps/wbot_control__type_support.cpp.o
+[1.648s] [ 41%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/wbot_msgs/msg/detail/dds_fastrtps/wbot_state__type_support.cpp.o
+[1.650s] [ 43%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/wbot_msgs/msg/detail/dds_fastrtps/velocity_command__type_support.cpp.o
+[1.650s] [ 45%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/wbot_msgs/msg/detail/dds_fastrtps/mpc_performance__type_support.cpp.o
+[1.670s] [ 49%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/wbot_msgs/msg/velocity_command__type_support.cpp.o
+[1.670s] [ 49%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/wbot_msgs/msg/wbot_state__type_support.cpp.o
+[1.671s] [ 50%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/wbot_msgs/msg/wbot_control__type_support.cpp.o
+[1.672s] [ 52%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/wbot_msgs/msg/mpc_performance__type_support.cpp.o
+[1.690s] [ 54%] Linking CXX shared library libwbot_msgs__rosidl_typesupport_c.so
+[1.714s] [ 54%] Built target wbot_msgs__rosidl_typesupport_c
+[1.718s] [ 56%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/wbot_msgs/msg/detail/wbot_state__type_support_c.cpp.o
+[1.719s] [ 58%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/wbot_msgs/msg/detail/mpc_performance__type_support_c.cpp.o
+[1.720s] [ 60%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/wbot_msgs/msg/detail/wbot_control__type_support_c.cpp.o
+[1.720s] [ 61%] Building CXX object CMakeFiles/wbot_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/wbot_msgs/msg/detail/velocity_command__type_support_c.cpp.o
+[1.724s] [ 63%] Building C object CMakeFiles/wbot_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/wbot_msgs/msg/detail/wbot_state__type_support.c.o
+[1.724s] [ 67%] Building C object CMakeFiles/wbot_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/wbot_msgs/msg/detail/velocity_command__type_support.c.o
+[1.724s] [ 67%] Building C object CMakeFiles/wbot_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/wbot_msgs/msg/detail/wbot_control__type_support.c.o
+[1.725s] [ 69%] Building C object CMakeFiles/wbot_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/wbot_msgs/msg/detail/mpc_performance__type_support.c.o
+[1.748s] [ 70%] Linking C shared library libwbot_msgs__rosidl_typesupport_introspection_c.so
+[1.759s] [ 72%] Linking CXX shared library libwbot_msgs__rosidl_typesupport_cpp.so
+[1.768s] [ 72%] Built target wbot_msgs__rosidl_typesupport_introspection_c
+[1.783s] [ 72%] Built target wbot_msgs__rosidl_typesupport_cpp
+[1.890s] [ 74%] Linking CXX shared library libwbot_msgs__rosidl_typesupport_fastrtps_c.so
+[1.890s] [ 76%] Linking CXX shared library libwbot_msgs__rosidl_typesupport_fastrtps_cpp.so
+[1.907s] [ 78%] Linking CXX shared library libwbot_msgs__rosidl_typesupport_introspection_cpp.so
+[1.926s] [ 78%] Built target wbot_msgs__rosidl_typesupport_fastrtps_c
+[1.926s] [ 78%] Built target wbot_msgs__rosidl_typesupport_fastrtps_cpp
+[1.943s] [ 78%] Built target wbot_msgs__rosidl_typesupport_introspection_cpp
+[1.954s] [ 78%] Built target wbot_msgs
+[1.969s] [ 80%] Generating Python code for ROS interfaces
+[2.345s] [ 80%] Built target wbot_msgs__py
+[2.356s] [ 81%] Building C object CMakeFiles/wbot_msgs__rosidl_generator_py.dir/rosidl_generator_py/wbot_msgs/msg/_velocity_command_s.c.o
+[2.357s] [ 83%] Building C object CMakeFiles/wbot_msgs__rosidl_generator_py.dir/rosidl_generator_py/wbot_msgs/msg/_wbot_state_s.c.o
+[2.357s] [ 85%] Building C object CMakeFiles/wbot_msgs__rosidl_generator_py.dir/rosidl_generator_py/wbot_msgs/msg/_wbot_control_s.c.o
+[2.357s] [ 87%] Building C object CMakeFiles/wbot_msgs__rosidl_generator_py.dir/rosidl_generator_py/wbot_msgs/msg/_mpc_performance_s.c.o
+[2.405s] [ 89%] Linking C shared library rosidl_generator_py/wbot_msgs/libwbot_msgs__rosidl_generator_py.so
+[2.442s] [ 89%] Built target wbot_msgs__rosidl_generator_py
+[2.468s] [ 90%] Building C object CMakeFiles/wbot_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/wbot_msgs/_wbot_msgs_s.ep.rosidl_typesupport_introspection_c.c.o
+[2.468s] [ 92%] Building C object CMakeFiles/wbot_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/wbot_msgs/_wbot_msgs_s.ep.rosidl_typesupport_c.c.o
+[2.470s] [ 94%] Building C object CMakeFiles/wbot_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/wbot_msgs/_wbot_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o
+[2.515s] [ 98%] Linking C shared library rosidl_generator_py/wbot_msgs/wbot_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.515s] [ 98%] Linking C shared library rosidl_generator_py/wbot_msgs/wbot_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.519s] [100%] Linking C shared library rosidl_generator_py/wbot_msgs/wbot_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.537s] [100%] Built target wbot_msgs__rosidl_typesupport_introspection_c__pyext
+[2.538s] [100%] Built target wbot_msgs__rosidl_typesupport_c__pyext
+[2.539s] [100%] Built target wbot_msgs__rosidl_typesupport_fastrtps_c__pyext
+[2.547s] Invoked command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs -- -j28 -l28
+[2.555s] Invoking command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs
+[2.567s] -- Install configuration: ""
+[2.568s] -- Execute custom install script
+[2.568s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/ament_index/resource_index/rosidl_interfaces/wbot_msgs
+[2.576s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/mpc_performance__functions.h
+[2.582s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/mpc_performance__struct.h
+[2.592s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/mpc_performance__type_support.h
+[2.602s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/velocity_command__functions.h
+[2.617s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/velocity_command__struct.h
+[2.631s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/velocity_command__type_support.h
+[2.645s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_control__functions.h
+[2.660s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_control__struct.h
+[2.672s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_control__type_support.h
+[2.676s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_state__functions.h
+[2.685s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_state__struct.h
+[2.700s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_state__type_support.h
+[2.714s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/mpc_performance.h
+[2.721s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/rosidl_generator_c__visibility_control.h
+[2.726s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/velocity_command.h
+[2.730s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/wbot_control.h
+[2.737s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/wbot_state.h
+[2.746s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/environment/library_path.sh
+[2.751s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/environment/library_path.dsv
+[2.759s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/mpc_performance__rosidl_typesupport_fastrtps_c.h
+[2.763s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/velocity_command__rosidl_typesupport_fastrtps_c.h
+[2.769s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_control__rosidl_typesupport_fastrtps_c.h
+[2.777s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_state__rosidl_typesupport_fastrtps_c.h
+[2.784s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.791s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/mpc_performance__builder.hpp
+[2.801s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/mpc_performance__struct.hpp
+[2.813s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/mpc_performance__traits.hpp
+[2.828s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/mpc_performance__type_support.hpp
+[2.835s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/velocity_command__builder.hpp
+[2.848s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/velocity_command__struct.hpp
+[2.860s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/velocity_command__traits.hpp
+[2.870s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/velocity_command__type_support.hpp
+[2.879s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_control__builder.hpp
+[2.892s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_control__struct.hpp
+[2.910s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_control__traits.hpp
+[2.927s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_control__type_support.hpp
+[2.937s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_state__builder.hpp
+[2.945s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_state__struct.hpp
+[2.956s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_state__traits.hpp
+[2.968s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_state__type_support.hpp
+[2.980s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/mpc_performance.hpp
+[2.998s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[3.012s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/velocity_command.hpp
+[3.022s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/wbot_control.hpp
+[3.037s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/wbot_state.hpp
+[3.049s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/mpc_performance__rosidl_typesupport_fastrtps_cpp.hpp
+[3.056s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/velocity_command__rosidl_typesupport_fastrtps_cpp.hpp
+[3.065s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_control__rosidl_typesupport_fastrtps_cpp.hpp
+[3.075s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_state__rosidl_typesupport_fastrtps_cpp.hpp
+[3.084s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[3.091s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/mpc_performance__rosidl_typesupport_introspection_c.h
+[3.100s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/velocity_command__rosidl_typesupport_introspection_c.h
+[3.118s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_control__rosidl_typesupport_introspection_c.h
+[3.129s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_state__rosidl_typesupport_introspection_c.h
+[3.136s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[3.142s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/mpc_performance__rosidl_typesupport_introspection_cpp.hpp
+[3.150s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/velocity_command__rosidl_typesupport_introspection_cpp.hpp
+[3.165s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_control__rosidl_typesupport_introspection_cpp.hpp
+[3.176s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/include/wbot_msgs/wbot_msgs/msg/detail/wbot_state__rosidl_typesupport_introspection_cpp.hpp
+[3.188s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/environment/pythonpath.sh
+[3.202s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/environment/pythonpath.dsv
+[3.208s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[3.215s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[3.224s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[3.237s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[3.250s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/__init__.py
+[3.260s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/_wbot_msgs_s.ep.rosidl_typesupport_c.c
+[3.273s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/_wbot_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[3.288s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/_wbot_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[3.304s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/libwbot_msgs__rosidl_generator_py.so
+[3.313s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/msg/__init__.py
+[3.327s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/msg/_mpc_performance.py
+[3.338s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/msg/_mpc_performance_s.c
+[3.350s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/msg/_velocity_command.py
+[3.364s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/msg/_velocity_command_s.c
+[3.375s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/msg/_wbot_control.py
+[3.389s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/msg/_wbot_control_s.c
+[3.399s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/msg/_wbot_state.py
+[3.413s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/msg/_wbot_state_s.c
+[3.421s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/wbot_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.431s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/wbot_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.441s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/wbot_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.451s] -- Up-to-date symlink: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/wbot_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[3.451s] -- Up-to-date symlink: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/wbot_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[3.451s] -- Up-to-date symlink: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/wbot_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[3.451s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/msg/WbotState.idl
+[3.459s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/msg/WbotControl.idl
+[3.473s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/msg/VelocityCommand.idl
+[3.489s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/msg/MpcPerformance.idl
+[3.505s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/msg/WbotState.msg
+[3.514s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/msg/WbotControl.msg
+[3.521s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/msg/VelocityCommand.msg
+[3.527s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/msg/MpcPerformance.msg
+[3.533s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/ament_index/resource_index/package_run_dependencies/wbot_msgs
+[3.537s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/ament_index/resource_index/parent_prefix_path/wbot_msgs
+[3.542s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/environment/ament_prefix_path.sh
+[3.548s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/environment/ament_prefix_path.dsv
+[3.557s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/environment/path.sh
+[3.573s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/environment/path.dsv
+[3.589s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/local_setup.bash
+[3.604s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/local_setup.sh
+[3.615s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/local_setup.zsh
+[3.621s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/local_setup.dsv
+[3.626s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/package.dsv
+[3.632s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/ament_index/resource_index/packages/wbot_msgs
+[3.636s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/rosidl_cmake-extras.cmake
+[3.644s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[3.654s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[3.665s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[3.678s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[3.690s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[3.704s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[3.713s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/wbot_msgsConfig.cmake
+[3.718s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/wbot_msgsConfig-version.cmake
+[3.730s] -- Symlinking: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/package.xml
+[3.745s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/libwbot_msgs__rosidl_generator_c.so
+[3.745s] -- Set runtime path of "/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/libwbot_msgs__rosidl_generator_c.so" to ""
+[3.745s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/libwbot_msgs__rosidl_typesupport_fastrtps_c.so
+[3.745s] -- Set runtime path of "/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/libwbot_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[3.746s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/libwbot_msgs__rosidl_typesupport_fastrtps_cpp.so
+[3.746s] -- Set runtime path of "/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/libwbot_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[3.746s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/libwbot_msgs__rosidl_typesupport_introspection_c.so
+[3.746s] -- Set runtime path of "/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/libwbot_msgs__rosidl_typesupport_introspection_c.so" to ""
+[3.746s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/libwbot_msgs__rosidl_typesupport_c.so
+[3.746s] -- Set runtime path of "/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/libwbot_msgs__rosidl_typesupport_c.so" to ""
+[3.746s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/libwbot_msgs__rosidl_typesupport_introspection_cpp.so
+[3.747s] -- Set runtime path of "/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/libwbot_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[3.747s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/libwbot_msgs__rosidl_typesupport_cpp.so
+[3.747s] -- Set runtime path of "/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/libwbot_msgs__rosidl_typesupport_cpp.so" to ""
+[3.766s] Listing '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs'...
+[3.766s] Compiling '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/__init__.py'...
+[3.766s] Listing '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/msg'...
+[3.766s] Compiling '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/msg/__init__.py'...
+[3.766s] Compiling '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/msg/_mpc_performance.py'...
+[3.766s] Compiling '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/msg/_velocity_command.py'...
+[3.766s] Compiling '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/msg/_wbot_control.py'...
+[3.766s] Compiling '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages/wbot_msgs/msg/_wbot_state.py'...
+[3.768s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/libwbot_msgs__rosidl_generator_py.so
+[3.768s] -- Set runtime path of "/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib/libwbot_msgs__rosidl_generator_py.so" to ""
+[3.768s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/export_wbot_msgs__rosidl_generator_cExport.cmake
+[3.768s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/export_wbot_msgs__rosidl_generator_cExport-noconfig.cmake
+[3.768s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/export_wbot_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[3.768s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/export_wbot_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[3.768s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/export_wbot_msgs__rosidl_generator_cppExport.cmake
+[3.768s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/export_wbot_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[3.768s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/export_wbot_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[3.768s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/wbot_msgs__rosidl_typesupport_introspection_cExport.cmake
+[3.768s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/wbot_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[3.768s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/wbot_msgs__rosidl_typesupport_cExport.cmake
+[3.768s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/wbot_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[3.768s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/wbot_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[3.768s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/wbot_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[3.768s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/wbot_msgs__rosidl_typesupport_cppExport.cmake
+[3.768s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/wbot_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[3.769s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/export_wbot_msgs__rosidl_generator_pyExport.cmake
+[3.769s] -- Installing: /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/share/wbot_msgs/cmake/export_wbot_msgs__rosidl_generator_pyExport-noconfig.cmake
+[3.769s] Invoked command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs

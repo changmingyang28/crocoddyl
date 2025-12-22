@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "wbot_msgs__py",
+		"source" : "/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs/wbot_msgs__py"
+	}
+}

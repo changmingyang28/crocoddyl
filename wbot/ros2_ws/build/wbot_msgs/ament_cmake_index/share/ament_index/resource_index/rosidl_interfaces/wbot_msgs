@@ -1,0 +1,8 @@
+msg/MpcPerformance.idl
+msg/MpcPerformance.msg
+msg/VelocityCommand.idl
+msg/VelocityCommand.msg
+msg/WbotControl.idl
+msg/WbotControl.msg
+msg/WbotState.idl
+msg/WbotState.msg

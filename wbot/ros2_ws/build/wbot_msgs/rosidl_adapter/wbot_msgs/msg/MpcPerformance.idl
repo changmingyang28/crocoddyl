@@ -1,0 +1,36 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from wbot_msgs/msg/MpcPerformance.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module wbot_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "MPC performance metrics message" "\n"
+      "Published by MPC node for monitoring")
+    struct MpcPerformance {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "OCP solve time (seconds)")
+      double solve_time;
+
+      @verbatim (language="comment", text=
+        "Number of DDP iterations")
+      int32 iterations;
+
+      @verbatim (language="comment", text=
+        "Whether solver converged")
+      boolean converged;
+
+      @verbatim (language="comment", text=
+        "Final cost value")
+      double cost;
+
+      @verbatim (language="comment", text=
+        "MPC computation frequency (Hz)")
+      double mpc_frequency;
+    };
+  };
+};

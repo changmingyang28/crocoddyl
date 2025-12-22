@@ -124,6 +124,8 @@ def playback_with_position_control(
         """重置到初始配置。"""
         data.qpos[:] = qs[0]
         data.qvel[:] = 0
+        data.ctrl[:] = 0  # ✅ 重置控制器状态，确保每次循环一致
+        data.act[:] = 0   # ✅ 重置激活器状态（如果有）
         mujoco.mj_forward(model, data)
         frame_idx[0] = 0
 

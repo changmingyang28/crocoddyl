@@ -1,0 +1,1 @@
+/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs/rosidl_typesupport_fastrtps_cpp/wbot_msgs/msg/detail/wbot_state__rosidl_typesupport_fastrtps_cpp.hpp

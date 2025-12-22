@@ -4,7 +4,31 @@
       "Bash(conda run:*)",
       "Bash(wait)",
       "Bash(python playback_viewer_enhanced.py:*)",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "WebSearch",
+      "Bash(python3:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:gepettoweb.laas.fr)",
+      "Bash(ls:*)",
+      "Bash(source:*)",
+      "Bash(ros2 pkg create:*)",
+      "Bash(tree:*)",
+      "Bash(colcon build:*)",
+      "Bash(chmod:*)",
+      "Bash(conda activate:*)",
+      "Bash(dpkg:*)",
+      "Bash(bash -c \"source /opt/ros/humble/setup.bash && python3 -c ''import rclpy; print(\"\"✓ rclpy found after sourcing ROS2\"\")''\")",
+      "Bash(apt search:*)",
+      "Bash(pip3 install:*)",
+      "Bash(sudo apt update:*)",
+      "Bash(sudo apt install:*)",
+      "Bash(pip3 search:*)",
+      "Bash(bash -c \"source /opt/ros/humble/setup.bash && python3 -c ''import pinocchio; print(\"\"✓ pinocchio:\"\", pinocchio.__version__)''\")",
+      "Bash(pip3 uninstall:*)",
+      "Bash(bash -c \"source /opt/ros/humble/setup.bash && python3 -c ''import pinocchio; import crocoddyl; import mujoco; print(\"\"✓ All imports successful!\"\")''\")",
+      "Bash(ln:*)",
+      "Bash(./run_with_conda.sh)",
+      "Bash(pkill:*)"
     ]
   }
 }

@@ -1,0 +1,3 @@
+[console_scripts]
+mujoco_node = wbot_simulator.mujoco_node:main
+

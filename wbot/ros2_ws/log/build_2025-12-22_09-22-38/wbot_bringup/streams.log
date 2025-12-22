@@ -1,0 +1,25 @@
+[0.256s] Invoking command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup': AMENT_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs LD_LIBRARY_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_command:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup/build --no-deps symlink_data
+[0.372s] running develop
+[0.432s] running egg_info
+[0.432s] creating wbot_bringup.egg-info
+[0.432s] writing wbot_bringup.egg-info/PKG-INFO
+[0.432s] writing dependency_links to wbot_bringup.egg-info/dependency_links.txt
+[0.432s] writing entry points to wbot_bringup.egg-info/entry_points.txt
+[0.432s] writing requirements to wbot_bringup.egg-info/requires.txt
+[0.432s] writing top-level names to wbot_bringup.egg-info/top_level.txt
+[0.432s] writing manifest file 'wbot_bringup.egg-info/SOURCES.txt'
+[0.433s] reading manifest file 'wbot_bringup.egg-info/SOURCES.txt'
+[0.433s] writing manifest file 'wbot_bringup.egg-info/SOURCES.txt'
+[0.434s] running build_ext
+[0.434s] Creating /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/lib/python3.10/site-packages/wbot-bringup.egg-link (link to .)
+[0.434s] 
+[0.434s] Installed /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup
+[0.434s] running symlink_data
+[0.434s] creating /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/ament_index
+[0.434s] creating /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/ament_index/resource_index
+[0.434s] creating /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/ament_index/resource_index/packages
+[0.434s] symbolically linking /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup/resource/wbot_bringup -> /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/ament_index/resource_index/packages
+[0.434s] symbolically linking /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup/package.xml -> /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/wbot_bringup
+[0.434s] creating /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/wbot_bringup/launch
+[0.434s] symbolically linking /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup/launch/wbot_mpc.launch.py -> /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/share/wbot_bringup/launch
+[0.445s] Invoked command in '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup' returned '0': AMENT_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs LD_LIBRARY_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_bringup/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_command:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_command/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_bringup/build --no-deps symlink_data

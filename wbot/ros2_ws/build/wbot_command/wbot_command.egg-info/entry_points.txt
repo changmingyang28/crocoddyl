@@ -1,0 +1,3 @@
+[console_scripts]
+velocity_command = wbot_command.velocity_command_node:main
+

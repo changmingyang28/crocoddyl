@@ -1,0 +1,9 @@
+{
+  "package_name": "wbot_msgs",
+  "non_idl_tuples": [
+    "/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_msgs:msg/WbotState.msg",
+    "/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_msgs:msg/WbotControl.msg",
+    "/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_msgs:msg/VelocityCommand.msg",
+    "/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_msgs:msg/MpcPerformance.msg"
+  ]
+}

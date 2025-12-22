@@ -1,0 +1,22 @@
+running egg_info
+writing ../../build/wbot_mpc/wbot_mpc.egg-info/PKG-INFO
+writing dependency_links to ../../build/wbot_mpc/wbot_mpc.egg-info/dependency_links.txt
+writing entry points to ../../build/wbot_mpc/wbot_mpc.egg-info/entry_points.txt
+writing requirements to ../../build/wbot_mpc/wbot_mpc.egg-info/requires.txt
+writing top-level names to ../../build/wbot_mpc/wbot_mpc.egg-info/top_level.txt
+reading manifest file '../../build/wbot_mpc/wbot_mpc.egg-info/SOURCES.txt'
+writing manifest file '../../build/wbot_mpc/wbot_mpc.egg-info/SOURCES.txt'
+running build
+running build_py
+copying wbot_mpc/mpc_node.py -> /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/build/lib/wbot_mpc
+running install
+running install_lib
+copying /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/build/lib/wbot_mpc/mpc_node.py -> /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages/wbot_mpc
+byte-compiling /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages/wbot_mpc/mpc_node.py to mpc_node.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages/wbot_mpc-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/wbot_mpc/wbot_mpc.egg-info to /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/python3.10/site-packages/wbot_mpc-0.0.0-py3.10.egg-info
+running install_scripts
+Installing mpc_node script to /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_mpc/lib/wbot_mpc
+writing list of installed files to '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_mpc/install.log'

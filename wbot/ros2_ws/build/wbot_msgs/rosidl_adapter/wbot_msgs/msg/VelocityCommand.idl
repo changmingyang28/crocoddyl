@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from wbot_msgs/msg/VelocityCommand.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module wbot_msgs {
+  module msg {
+    @verbatim (language="comment", text=
+      "High-level velocity command for wbot" "\n"
+      "User specifies desired base velocities")
+    struct VelocityCommand {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Desired forward velocity (m/s)")
+      double vx;
+
+      @verbatim (language="comment", text=
+        "Desired yaw angular velocity (rad/s)")
+      double omega_z;
+
+      @verbatim (language="comment", text=
+        "Target arm joint angles (optional, empty means use current)")
+      sequence<double> target_joint_angles;
+    };
+  };
+};

@@ -1,0 +1,1 @@
+/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_msgs/rosidl_generator_py/wbot_msgs/msg/_mpc_performance_s.c

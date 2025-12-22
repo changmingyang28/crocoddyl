@@ -1,0 +1,24 @@
+[0.360s] Invoking command in '/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_simulator': AMENT_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs CONDA_PROMPT_MODIFIER=(croc) LD_LIBRARY_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/guanyu/miniconda3/envs/croc/lib PYTHONPATH=/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/wbot_simulator build --build-base /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator/build install --record /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator/install.log --single-version-externally-managed install_data
+[0.457s] running egg_info
+[0.458s] writing ../../build/wbot_simulator/wbot_simulator.egg-info/PKG-INFO
+[0.458s] writing dependency_links to ../../build/wbot_simulator/wbot_simulator.egg-info/dependency_links.txt
+[0.458s] writing entry points to ../../build/wbot_simulator/wbot_simulator.egg-info/entry_points.txt
+[0.458s] writing requirements to ../../build/wbot_simulator/wbot_simulator.egg-info/requires.txt
+[0.458s] writing top-level names to ../../build/wbot_simulator/wbot_simulator.egg-info/top_level.txt
+[0.458s] reading manifest file '../../build/wbot_simulator/wbot_simulator.egg-info/SOURCES.txt'
+[0.459s] writing manifest file '../../build/wbot_simulator/wbot_simulator.egg-info/SOURCES.txt'
+[0.459s] running build
+[0.459s] running build_py
+[0.459s] copying wbot_simulator/mujoco_node.py -> /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator/build/lib/wbot_simulator
+[0.459s] running install
+[0.459s] running install_lib
+[0.459s] copying /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator/build/lib/wbot_simulator/mujoco_node.py -> /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/lib/python3.10/site-packages/wbot_simulator
+[0.460s] byte-compiling /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/lib/python3.10/site-packages/wbot_simulator/mujoco_node.py to mujoco_node.cpython-310.pyc
+[0.460s] running install_data
+[0.461s] running install_egg_info
+[0.461s] removing '/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/lib/python3.10/site-packages/wbot_simulator-0.0.0-py3.10.egg-info' (and everything under it)
+[0.461s] Copying ../../build/wbot_simulator/wbot_simulator.egg-info to /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/lib/python3.10/site-packages/wbot_simulator-0.0.0-py3.10.egg-info
+[0.462s] running install_scripts
+[0.471s] Installing mujoco_node script to /home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/lib/wbot_simulator
+[0.471s] writing list of installed files to '/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator/install.log'
+[0.481s] Invoked command in '/home/guanyu/crocoddyl/wbot/ros2_ws/src/wbot_simulator' returned '0': AMENT_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs CONDA_PROMPT_MODIFIER=(croc) LD_LIBRARY_PATH=/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/home/guanyu/miniconda3/envs/croc/lib PYTHONPATH=/home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_simulator/lib/python3.10/site-packages:/home/guanyu/crocoddyl/wbot/ros2_ws/install/wbot_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/wbot_simulator build --build-base /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator/build install --record /home/guanyu/crocoddyl/wbot/ros2_ws/build/wbot_simulator/install.log --single-version-externally-managed install_data
